@@ -1,0 +1,37 @@
+@import url('https://fonts.googleapis.com/css?family=Amatic+SC|Cinzel|Cuprum|Josefin+Sans|Noto+Sans+KR&display=swap');
+
+body{
+    font-family: 'Noto Sans KR', 'Josefin Sans', 'Amatic SC', sans-serif;
+}
+
+.navbar{
+    background-color: rgb(40, 49, 53);
+    height: 4.5 em;
+    padding: 0.5 em;
+}
+a.color{
+    color: rgb(251, 250, 253);
+}
+h1{
+    font-family: 'WaltographRegular';
+    font-size: 72px;
+    color: rgb(219, 56, 178);
+    text-shadow: 4px 4px 2px rgb(192, 183, 180);
+}
+h2{
+    font-family: 'Josefin Sans';
+    font-size: 32px;
+    color: rgb(117, 100, 91);
+}
+h3{
+    font-family: 'Josefin Sans';
+    font-size: 32px;
+    color: rgb(139, 84, 126);
+}
+#data-table{
+    background-color: rgb(255, 252, 248);
+    color: rgb(36, 75, 90);
+}
+.table th{
+    background-color: rgb(250, 243, 235);
+}

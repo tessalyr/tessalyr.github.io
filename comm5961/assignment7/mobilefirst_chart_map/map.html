@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+    
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Map</title>
+        <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+        <script type="text/javascript" src="http://netdna.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+        <script src="http://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+        <link href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+        <link href="http://pingendo.github.io/pingendo-bootstrap/themes/default/bootstrap.css" rel="stylesheet" type="text/css">
+        <link href="style.css" rel="stylesheet" type="text/css">
+        <link rel="stylesheet" media="screen" href="https://fontlibrary.org/face/waltograph" type="text/css"/>
+
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.3.4/leaflet.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.3.4/leaflet.js"></script>
+        <script src="https://api.tiles.mapbox.com/mapbox.js/plugins/leaflet-markercluster/v0.4.0/leaflet.markercluster.js"></script>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.19/css/dataTables.bootstrap.min.css">
+        <link rel="stylesheet" href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.min.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <script type="text/javascript" language="javascript" src="https://cdn.datatables.net/1.10.19/js/dataTables.bootstrap.min.js"></script>
+        <script type="text/javascript" src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
+        <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/d3/3.4.11/d3.js"></script>
+        <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/c3/0.1.29/c3.js"></script>
+        <link href="//cdnjs.cloudflare.com/ajax/libs/c3/0.1.29/c3.css" rel="stylesheet" type="text/css">
+        <style type="text/css">
+            #map {
+                height: 400px; 
+                bottom:0;
+                left:0;
+                right:0;
+              }
+        </style>
+
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.min.css">
+        
+    </head>
+    
+    <body data-spy="scroll">
+        <div class="container no-margin">
+            <div class="list-group">
+                <a href="index.html" class="list-group-item active main-color-bg"><i class="fa fa-fw fa-md fa-globe"></i> Map<span class="badge">&lt;</span></a>
+            </div>
+        </div>
+        <script>
+            $( document ).click(function() {
+                                      $( ".list-group-item.wipe" ).toggle( "slide" );
+                                    });
+        </script>
+        <div class="section wipe">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12 text-center">
+                        <h1 class="title text-center">Disney Princess Theme Parks</h1>
+                        <br>
+                        <button type="button" class="btn btn-warning" id="roll_up" onclick="show_districts();">Show Places</button>
+                        <br>
+                        <br>
+                        <div id="map"></div>
+                        <br>
+                        <br>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="footer">
+            <div class="row">
+                <div class="col-xs-3">
+                    <i class="fa fa-2x fa-fw fa-home"></i>
+                </div>
+                <div class="col-xs-3">
+                    <i class="fa fa-2x fa-bar-chart fa-fw"></i>
+                </div>
+                <div class="col-xs-3">
+                    <i class="fa fa-2x fa-calendar fa-fw"></i>
+                </div>
+                <div class="col-xs-3">
+                    <i class="fa fa-2x fa-fw fa-map-marker"></i>
+                </div>
+            </div>
+        </div>
+        <script>
+            var mapboxTiles = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {attribution: 'Map data &copy; <a href="https://openstreetmap.org">OpenStreetMap</a>', maxZoom: 18,});
+            
+                var map = L.map('map')
+                      .addLayer(mapboxTiles)
+                      .setView([32.386687, -98.964003], 3.5);
+            
+            
+                var items = [];
+                var airtable_read_endpoint = "https://api.airtable.com/v0/appOSYiHG82lGNfcb/Princess%20Theme%20Parks?api_key=keywZFkvBIh6rNMwS";
+            
+                var data = [];
+                $.getJSON(airtable_read_endpoint, function(result) {
+                       $.each(result.records, function(key,value) {
+                           items = {};
+                               items["name"] = value.fields.name;
+                               items["princess"] = value.fields.princess;
+                               items["picture"] = value.fields.pic;
+                               items["image_url"] = value.fields.img_url;
+                               items["latitud"] = value.fields.lat;
+                               items["longitud"] = value.fields.lng;
+                               items["area"] = value.fields.area;
+                               items["park"] = value.fields.park;
+                               data.push(items);
+                               console.log(items);
+                        }); // end .each
+                }); // end getJSON
+        </script>
+        <script>
+            function show_districts(){
+            
+                  for (var i in data) {
+                      var latlng = L.latLng({ lat: data[i].latitud, lng: data[i].longitud });
+                      L.marker( latlng )
+                          .bindPopup( '<a href="' + data[i].url + '" target="_blank">' + '<img src="' + data[i].image_url+'" width = "80px"><br>'+data[i].name + '</a>' )
+                          .addTo(map);
+                  }
+            
+                }
+        </script>
+    </body>
+
+</html>
