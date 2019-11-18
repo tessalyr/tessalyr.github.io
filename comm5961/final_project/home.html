@@ -1,101 +1,299 @@
 <!DOCTYPE html>
 <html>
+    
     <head>
         <!-- Required meta tags -->
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <!-- Bootstrap CDN -->
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
         <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
         <script type="text/javascript" src="http://netdna.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
         <script src="http://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+        crossorigin="anonymous">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
         <link href="//cdnjs.cloudflare.com/ajax/libs/c3/0.1.29/c3.css" rel="stylesheet" type="text/css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.min.css">
         <link href="//cdnjs.cloudflare.com/ajax/libs/c3/0.1.29/c3.css" rel="stylesheet" type="text/css">
-        <script src="script.js"></script>
+        
+
+        <link rel="stylesheet" href="custom.css">
         <link rel="stylesheet" href="style.css">
         <title>Disney Princess World</title>
-        <link rel="stylesheet" media="screen" href="https://fontlibrary.org/face/waltograph" type="text/css"/>
-        <style>
-
-        </style>
+        <link rel="stylesheet" media="screen" href="https://fontlibrary.org/face/waltograph"
+        type="text/css">
     </head>
     
     <body>
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
-                <a class="navbar-brand col-lg-8 col-xl-9" href="entry.html">Disney Princess World</a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarText">
-                    <ul class="navbar-nav mr-auto">
-                        <li class="nav-item active">
-                            <a class="nav-link" href="home.html">Home <span class="sr-only">(current)</span></a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="movies.html">Movies</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="themepark.html">Theme Park</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="shopping.html">Shopping</a>
-                        </li>
-                    </ul>
-                </div>
-         </nav>
-
-         <div class="latestNews" >
-                <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
-                  <ol class="carousel-indicators">
+        <!--Navbar-->
+        <nav class="navbar navbar-fixed-top navbar-expand-md navbar-light bg-light">
+            <div class="col-md-7 col-lg-8 col-xl-9">
+                <a class="navbar-brand" href="entry.html">Disney Princess World</a>
+            </div>     
+            <div class="collapse navbar-collapse">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="home.html">Home <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="movies.html">Movies</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="themepark.html">Theme Park</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="shopping.html">Shopping</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <!--Navebar End-->
+        <!--Latest News-->
+        <div class="news">
+            <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
+                <ol class="carousel-indicators">
                     <li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
                     <li data-target="#carouselExampleCaptions" data-slide-to="1"></li>
                     <li data-target="#carouselExampleCaptions" data-slide-to="2"></li>
-                  </ol>
-                  <div class="carousel-inner">
+                </ol>
+                <div class="carousel-inner">
                     <div class="carousel-item active">
-                        <img src="https://lumiere-a.akamaihd.net/v1/images/b_frozen2_ticketsonsale_header_18547_1_dfa17999.jpeg?region=0,0,2048,640" class="d-block w-100" alt="...">
-                      <div class="carousel-caption d-none d-md-block">
-                        <h5>First slide label</h5>
-                        <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
-                      </div>
+                        <div class="imgBox">
+                            <a href="https://www.cnet.com/news/frozen-2-release-date-trailers-cast-and-everything-we-know-so-far/"
+                            target="_blank">
+                                <img src="https://ohmy.disney.com/wp-content/uploads/2019/11/Frozen25dbb044c56497.jpg" class="d-block w-100" alt="...">
+                            </a>
+                        </div>
+                        <div class="carousel-caption d-none d-md-block">
+                            <h1 class="newsTitle">Frozen II Is Coming</h1>
+                            <div class="blanklinemd"></div>
+                            <h4 class="newsContent">It’s November, which means that we’ve officially entered the month of Frozen II</h4>
+                            <div class="blankline"></div>
+                            <h4 class="newsContent">Grab your friends and venture into the unknown when the film hits theaters November 22!</h4>
+                            <div class="blanklinemd"></div>
+                        </div>
                     </div>
                     <div class="carousel-item">
-                      <img src="https://lumiere-a.akamaihd.net/v1/images/h_princess_rapunzel_v3_f5001fcd.jpeg?region=0,0,2048,640" class="d-block w-100" alt="...">
-                      <div class="carousel-caption d-none d-md-block">
-                        <h5>Second slide label</h5>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                      </div>
+                        <div class="imgBox">
+                            <a href="https://wdwprepschool.com/when-do-the-christmas-decorations-go-up-at-disney-world/"
+                            target="_blank">
+                                <img src="https://ohmy.disney.com/wp-content/uploads/2019/09/Frozen25cffb002d37dd.jpg" class="d-block w-100" alt="...">
+                            </a>
+                        </div>
+                        <div class="carousel-caption d-none d-md-block">
+                            <h1 class="newsTitle">Christmas 2019 Arrives at Disney World</h1>
+                            <div class="blanklinemd"></div>
+                            <h4 class="newsContent">Ultimate 2019 Disney World Christmas Guide</h4>
+                            <div class="blankline"></div>
+                            <h4 class="newsContent">When do the Christmas decorations go up at Disney World?</h4>
+                            <div class="blanklinemd"></div>
+                        </div>
                     </div>
                     <div class="carousel-item">
-                      <img src="https://lumiere-a.akamaihd.net/v1/images/b_aladdin_header_poststreet_18056_2298b430.jpeg?region=0,0,2048,640" class="d-block w-100" alt="...">
-                      <div class="carousel-caption d-none d-md-block">
-                        <h5>Third slide label</h5>
-                        <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
-                      </div>
+                        <div class="imgBox">
+                            <a href="https://www.scmp.com/news/china/society/article/3017727/disneys-live-action-mulan-trailer-lights-chinese-social-media"
+                            target="_blank">
+                                <img src="http://n.sinaimg.cn/sinacn20109/318/w1920h798/20190708/57c9-hzmafvn3501024.jpg" class="d-block w-100" alt="...">
+                            </a>
+                        </div>
+                        <div class="carousel-caption d-none d-md-block">
+                            <h1 class="newsTitle">Mulan trailer lights up Chinese social media</h1>
+                            <div class="blanklinemd"></div>
+                            <h4 class="newsContent">—- More than one billion views of Mulan discussion in China hours --</h4>
+                            <div
+                            class="blanklinemd"></div>
                     </div>
-                  </div>
-                  <a class="carousel-control-prev" href="#carouselExampleCaptions" role="button" data-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="sr-only">Previous</span>
-                  </a>
-                  <a class="carousel-control-next" href="#carouselExampleCaptions" role="button" data-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="sr-only">Next</span>
-                  </a>
                 </div>
-              </div>
-
-
-
-
+            </div>
+            <a class="carousel-control-prev" href="#carouselExampleCaptions" role="button"
+            data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#carouselExampleCaptions" role="button"
+            data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
+        </div>
+        <!--Latest News End-->
+        <!--Official Princess-->
+        <div class="section">
+            <div class="blanklinelg"></div>
+            <div class="blankline"></div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <h1 class="text-center">Official Princess</h1>
+                        <div class="blankline"></div>
+                        <p class="text-center lead">Choose your favorite princess and get to know more about her</p>
+                    </div>
+                </div>
+                <div class="blanklinemd"></div>
+                <div class="blankline"></div>
+                <div class="row d-flex justify-content-center">
+                    <div class="col-xs-12 col-md-4">
+                        <a href="https://princess.disney.com/snow-white"
+                        target="_blank">
+                            <img src="https://funmoneymom.com/wp-content/uploads/2018/09/snow-white-e1537975169882.jpeg" class="img-responsive" width="100%"></a>
+                        <div class="blankline"></div>
+                        <a href="https://princess.disney.com/snow-white"
+                        target="_blank">
+                            <div class="shadow p-3 mb-5 bg-white rounded">Snow White</div>
+                        </a>
+                    </div>
+                    <div class="col-xs-12 col-md-4">
+                        <a href="https://princess.disney.com/cinderella"
+                        target="_blank">
+                            <img src="https://funmoneymom.com/wp-content/uploads/2018/09/Cinderella.jpg" class="img-responsive" width="100%"></a>
+                        <div class="blankline"></div>
+                        <a href="https://princess.disney.com/cinderella"
+                        target="_blank">
+                            <div class="shadow p-3 mb-5 bg-white rounded">Cinderella</div>
+                        </a>
+                    </div>
+                    <div class="col-xs-12 col-md-4">
+                        <a href="https://princess.disney.com/aurora" target="_blank">
+                            <img src="https://funmoneymom.com/wp-content/uploads/2018/09/Aurora.jpg" class="img-responsive" width="100%"></a>
+                        <div class="blankline"></div>
+                        <a href="https://princess.disney.com/aurora" target="_blank">
+                            <div class="shadow p-3 mb-5 bg-white rounded">Aurora</div>
+                        </a>
+                    </div>
+                </div>
+                <div class="blanklinemd"></div>
+                <div class="row d-flex justify-content-center">
+                    <div class="col-xs-12 col-md-4">
+                        <a href="https://princess.disney.com/ariel" target="_blank">
+                            <img src="https://funmoneymom.com/wp-content/uploads/2018/09/Ariel-e1537975034404.jpeg" class="img-responsive" width="100%"></a>
+                        <div class="blankline"></div>
+                        <a href="https://princess.disney.com/ariel"
+                        target="_blank">
+                            <div class="shadow p-3 mb-5 bg-white rounded">Ariel</div>
+                        </a>
+                    </div>
+                    <div class="col-xs-12 col-md-4">
+                        <a href="https://princess.disney.com/belle" target="_blank">
+                            <img src="https://funmoneymom.com/wp-content/uploads/2018/09/Belle-e1537975077685.jpeg" class="img-responsive" width="100%"></a>
+                        <div class="blankline"></div>
+                        <a href="https://princess.disney.com/belle"
+                        target="_blank">
+                            <div class="shadow p-3 mb-5 bg-white rounded">Belle</div>
+                        </a>
+                    </div>
+                    <div class="col-xs-12 col-md-4">
+                        <a href="https://princess.disney.com/jasmine" target="_blank">
+                            <img src="https://funmoneymom.com/wp-content/uploads/2018/09/Jasmine.jpg" class="img-responsive" width="100%"></a>
+                        <div class="blankline"></div>
+                        <a href="https://princess.disney.com/jasmine" target="_blank">
+                            <div class="shadow p-3 mb-5 bg-white rounded">Jasmine</div>
+                        </a>
+                    </div>
+                </div>
+                <div class="blanklinemd"></div>
+                <div class="row d-flex justify-content-center">
+                    <div class="col-xs-12 col-md-4">
+                        <a href="https://princess.disney.com/pocahontas" target="_blank">
+                            <img src="https://funmoneymom.com/wp-content/uploads/2018/09/Pocahontas.jpg" class="img-responsive" width="100%"></a>
+                        <div class="blankline"></div>
+                        <a href="https://princess.disney.com/pocahontas" target="_blank">
+                            <div class="shadow p-3 mb-5 bg-white rounded">Pocahontas</div>
+                        </a>
+                    </div>
+                    <div class="col-xs-12 col-md-4">
+                        <a href="https://princess.disney.com/mulan" target="_blank">
+                            <img src="https://funmoneymom.com/wp-content/uploads/2018/09/Mulan-500x280.jpeg" class="img-responsive" width="100%"></a>
+                        <div class="blankline"></div>
+                        <a href="https://princess.disney.com/mulan"
+                        target="_blank">
+                            <div class="shadow p-3 mb-5 bg-white rounded">Mulan</div>
+                        </a>
+                    </div>
+                    <div class="col-xs-12 col-md-4">
+                        <a href="https://princess.disney.com/tiana" target="_blank">
+                            <img src="https://funmoneymom.com/wp-content/uploads/2018/09/Tiana.jpg" class="img-responsive" width="100%"></a>
+                        <div class="blankline"></div>
+                        <a href="https://princess.disney.com/tiana" target="_blank">
+                            <div class="shadow p-3 mb-5 bg-white rounded">Tiana</div>
+                        </a>
+                    </div>
+                </div>
+                <div class="blanklinemd"></div>
+                <div class="row d-flex justify-content-center">
+                    <div class="col-xs-12 col-md-4">
+                        <a href="https://princess.disney.com/rapunzel" target="_blank">
+                            <img src="https://funmoneymom.com/wp-content/uploads/2018/09/Rapunzel.jpg" class="img-responsive" width="100%"></a>
+                        <div class="blankline"></div>
+                        <a href="https://princess.disney.com/rapunzel" target="_blank">
+                            <div class="shadow p-3 mb-5 bg-white rounded">Rapunzel</div>
+                        </a>
+                    </div>
+                    <div class="col-xs-12 col-md-4">
+                        <a href="https://princess.disney.com/merida" target="_blank">
+                            <img src="https://funmoneymom.com/wp-content/uploads/2018/09/Merida.jpg" class="img-responsive" width="100%"></a>
+                        <div class="blankline"></div>
+                        <a href="https://princess.disney.com/merida" target="_blank">
+                            <div class="shadow p-3 mb-5 bg-white rounded">Merida</div>
+                        </a>
+                    </div>
+                    <div class="col-xs-12 col-md-4">
+                        <a href="https://princess.disney.com/moana" target="_blank">
+                            <img src="https://i.ytimg.com/vi/S0gfg1Nm9GU/maxresdefault.jpg" class="img-responsive" width="100%"></a>
+                        <div class="blankline"></div>
+                        <a href="https://princess.disney.com/moana" target="_blank">
+                            <div class="shadow p-3 mb-5 bg-white rounded">Moana</div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--Official Princess End-->
+        <!--Footer-->
+        <footer class="section section-primary">
+            <div class="blanklinelg"></div>
+            <div class="container">
+                <div class="row d-flex justify-content-center">
+                    <div class="col-sm-12 d-flex justify-content-center">
+                        <h3 class="footer-brand">Disney Princess World</h3>
+                    </div>
+                    <div class="col-sm-12 d-flex justify-content-center">
+                        <h5 class="footer-content"><div class="blankline"></div>Home Movies ThemePark Shopping</h5>
+                    </div>
+                    <div class="col-md-12"><hr></div>
+                    <div class="col-sm-12 d-flex justify-content-center">
+                        <div class="row">
+                            <div class="row">
+                                <div class="social_icons col-sm-12 text-right">
+                                    <a href="https://www.instagram.com/disney/?hl=en" target="_blank"><i class="fa fa-2x fa-fw fa-instagram pull-left text-inverse"></i></a>
+                                    <a href="https://twitter.com/Disney?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor"
+                                    target="_blank"><i class="fa fa-2x fa-fw fa-twitter text-inverse"></i></a>
+                                    <a href="https://www.facebook.com/Disney/" target="_blank"><i class="fa fa-2x fa-facebook fa-fw pull-left text-inverse"></i></a>
+                                    <a href="https://www.pinterest.com/Disney/" target="_blank"><i class="fa fa-2x fa-fw hub pull-right text-inverse fa-pinterest"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <div class="blanklinemd"></div><div class="blanklinemd"></div>
+        <!--Footer End-->
+        
+        <script src="script.js"></script>
         <!-- Optional JavaScript -->
         <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
     </body>
 
 </html>

@@ -1,41 +1,68 @@
 @import url('https://fonts.googleapis.com/css?family=Josefin+Sans|Merriweather+Sans|Montserrat|Questrial&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Marcellus+SC&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Arapey|Cinzel|Cookie|News+Cycle|Philosopher|Poiret+One|Sulphur+Point&display=swap');
 
-.navbar{
-  margin:0;
+.enterTitle {
+  font-family: 'WaltographRegular';
+  color: #fff; text-shadow: -0.1em 0.05em 0.1em rgb(0, 0, 0);
+  margin-top: 46%; 
+  font-size: 8em;
 }
+.enterLink {
+  font-family: 'Marcellus SC';
+  font-size: 2.5em;
+  color: #fff; text-shadow: -0.1em 0.05em 0.2em rgb(0, 0, 0);
+  margin-top:1.2em;
+}
+.et-right {font-size: 1em;}
+.navbar {margin:0;}
+.nav-item{
+  margin-left: 0.3em;
+}
+.navbar-brand{
+  font-family: 'WaltographRegular';
+  font-size: x-large;
+}
+.nav-link {font-size: 1.1em;} 
+.blanklinesm {height:0.5em;}
+.blankline {height:1em;}
+.blanklinemd {height:2em;}
+.blanklinelg {height:6em;}
+.imgBox{
+  background-image:linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.082),rgba(0, 0, 0, 0.555), rgb(0, 0, 0));
+}
+.imgBox img {mix-blend-mode:multiply;}
+.newsTitle{
+  font-family: 'Josefin Sans';
+  color: #fff; text-shadow: 0.1em -0.1em 0.2em black;
+}
+.newscontent {color: #fff; text-shadow: 0.1em -0.1em 0.2em black;}
+.text-center{
+  font-family: 'Josefin Sans';
+  color:#333; text-shadow: 0 0 0.1em rgb(180, 180, 180);
+}
+.section {color: #444;}
+.shadow{
+  font-size: 1.5em;
+  text-align: center;
+  font-family: 'Josefin Sans';
+  color: #444; text-shadow: 0 0 0.1em rgb(180, 180, 180);
+}
+.footer-brand{
+  font-family: 'WaltographRegular';
+  color:#888;
+}
+.footer-content{
+  color:#888;
+  word-spacing: 1em;
+  font-family: 'Philosopher';
+}
+.nav-link-title{ 
+  font-size: 1.5em; 
+  font-family: 'Josefin Sans';
+  color: #888; text-shadow: 0 0 0.1em rgb(190, 199, 204);
+} 
+.social_icons {color: #888;}
 
-@charset "utf-8";
-/* reset */
-body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,textarea,p,blockquote,th,td,input,select,textarea,button {margin:0;padding:0}  /* 初始化标签在所有浏览器中的margin、padding值 */
-fieldset,img {border:0 none}  /* 重置fieldset（表单分组）、图片的边框为0*/
-dl,ul,ol,menu,li {list-style:none}   /* 重置类表前导符号为onne,menu在HTML5中有效 */
-blockquote, q {quotes: none}   /* 重置嵌套引用的引号类型 */
-blockquote:before, blockquote:after,q:before, q:after {content:'';content:none}  /* 重置嵌套引用*/
-input,select,textarea,button {vertical-align:middle}  /* 重置表单控件垂直居中*/
-button {border:0 none;background-color:transparent;cursor:pointer}  /* 重置表单button按钮效果 */
-body {background:#fff}   /* 重置body 页面背景为白色 */
-body,th,td,input,select,textarea,button {font-size:12px;line-height:1 ;font-family:'Merriweather Sans','Questrial', 'Montserrat', 'Josefin Sans', sans-serif;color:#666} /* 重置页面文字属性 */
-a {color:#666;text-decoration:none}  /* 重置链接a标签 */
-a:active, a:hover {text-decoration:none}   /* 重置链接a标签的鼠标滑动效果 */
-address,caption,cite,code,dfn,em,var {font-style:normal;font-weight:normal}  /* 重置样式标签的样式 */
-caption {display:none;}    /* 重置表格标题为隐藏 */
-table {width:100%;border-collapse:collapse;border-spacing:0;table-layout:fixed;}    /* 重置table属性 */
-img{vertical-align:top}  /* 图片在当前行内的垂直位置 */
- 
-/* 页面设置 */
- 
-  /* 取消a标签点击后的虚线框 */
-a {outline: none;}  
-a:active {star:expression(this.onFocus=this.blur());}
- 
- /* 设置页面文字等在拖动鼠标选中情况下的背景色与文字颜色 */
-::selection {color: #fff;background-color: #4C6E78;}    
-::-moz-selection {color: #fff;background-color: #4C6E78;} 
- 
-/*清除浮动*/
-.clear{clear: both;}
- 
-/*清除浮动--推荐使用*/
-.clearfix:before,.clearfix:after{content: '';display: table;}
 
 
