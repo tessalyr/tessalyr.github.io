@@ -2,6 +2,19 @@
 @import url('https://fonts.googleapis.com/css?family=Marcellus+SC&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Arapey|Cinzel|Cookie|News+Cycle|Philosopher|Poiret+One|Sulphur+Point&display=swap');
 
+.overlay {
+  position: absolute;
+  display: flex;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  color: rgb(0, 0, 0);
+  text-align: center;
+}
 .enterTitle {
   font-family: 'WaltographRegular';
   color: #fff; text-shadow: -0.1em 0.05em 0.1em rgb(0, 0, 0);
@@ -15,19 +28,19 @@
   margin-top:1.2em;
 }
 .et-right {font-size: 1em;}
-.navbar {margin:0;}
-.nav-item{
-  margin-left: 0.3em;
+/* navbar */
+.navbar {
+  margin:0;
+  background:rgba(87, 100, 105, 0.9);
 }
+.nav-item {margin-left: 0.3em;}
 .navbar-brand{
   font-family: 'WaltographRegular';
   font-size: x-large;
+  padding-top: 16px;
 }
 .nav-link {font-size: 1.1em;} 
-.blanklinesm {height:0.5em;}
-.blankline {height:1em;}
-.blanklinemd {height:2em;}
-.blanklinelg {height:6em;}
+/* navbar End */
 .imgBox{
   background-image:linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.082),rgba(0, 0, 0, 0.555), rgb(0, 0, 0));
 }
@@ -48,21 +61,159 @@
   font-family: 'Josefin Sans';
   color: #444; text-shadow: 0 0 0.1em rgb(180, 180, 180);
 }
+.shadow:hover {
+  color: black;
+  text-shadow: 0.1em 0.1em 0.3em rgba(125, 156, 182, 0.562);
+}
+/* footer */
+.section_footer{background: rgb(87, 100, 105, 0.9)}
 .footer-brand{
   font-family: 'WaltographRegular';
-  color:#888;
+  color:rgb(250, 250, 250);
 }
 .footer-content{
-  color:#888;
+  color:rgb(250, 250, 250);
   word-spacing: 1em;
   font-family: 'Philosopher';
 }
+.fa {color: rgb(250, 250, 250);}
+/* footer End */
 .nav-link-title{ 
   font-size: 1.5em; 
   font-family: 'Josefin Sans';
-  color: #888; text-shadow: 0 0 0.1em rgb(190, 199, 204);
+  color: #555; text-shadow: 0 0 0.1em rgb(190, 199, 204);
 } 
-.social_icons {color: #888;}
+.nav-link-title:hover {color: black;}
+.subtitle {
+  color:#666;
+  font-family: 'Marcellus SC';
+  margin-left:3.3em;
+}
+.video_row {margin:2em 3em 0 3em}
+.video_title {margin-top:0.5em;}
+.pointer{cursor: pointer;}
+#card_title {
+  color:white;
+  margin:0;
+}
+#card_intro {
+  color:rgb(226, 226, 226);
+  font-family: 'Josefin Sans';
+  font-size: large;
+}
+.card-img-top {
+  width:100%;
+  height: 16vw;
+}
+.card-title {
+  font-family: 'Josefin Sans';
+  color:#333; text-shadow: 0 0 0.2em rgb(180, 180, 180);
+}
+.card-text {
+  font-family: 'Josefin Sans';
+  color: #444; text-shadow: 0 0 0.1em rgb(180, 180, 180);
+}
+.actress_card {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(https://images.pexels.com/photos/3180831/pexels-photo-3180831.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260); 
+  background-position: right bottom;  
+  background-size: cover; 
+  background-repeat: repeat; 
+  background-attachment: fixed;
+}
+#map{
+  height: 460px; 
+  width: 100%;
+  bottom:0;
+  left:0;
+  right:0;
+  border:3px dashed rgba(87, 100, 105, 0.5);
+}
+.location_name{font-size: 1.4em;}
+.travelguides_container{
+  background-image: linear-gradient(rgba(255, 255, 255, 0.589), rgba(255, 255, 255, 0.767)), url(https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1574490508830&di=ae04769b93faaffe357a0e39c58a73f6&imgtype=jpg&src=http%3A%2F%2Fimg3.imgtn.bdimg.com%2Fit%2Fu%3D476851863%2C1813084086%26fm%3D214%26gp%3D0.jpg); 
+  background-position: right bottom;  
+  background-size: cover; 
+  background-repeat: repeat; 
+  background-attachment: fixed;
+}
+.mb-0{
+  font-family: 'Cinzel';
+  color: rgb(47, 66, 63); text-shadow: 0 0 0.1em rgba(180, 180, 180, 0.8);
+}
+.well{
+  height: 40em;
+  margin-top: 1em;
+}
 
 
-
+/* 按钮 */
+.btn{font-size: 1.1em; border-radius: 0; padding:0.7em 1em 0.7em 1em;}
+.btn:hover {box-shadow: 0 0.5em 0.5em 0 rgba(255, 255, 255, 0.24), 0 1em 2em 0 rgba(255, 255, 255, 0.19);}
+#show_airtable{
+  background-color: rgba(255, 255, 255, 0.959);
+  color:black;
+  border:0;
+}
+#hide_airtable{
+  background-color: rgba(0, 0, 0, 0);
+  color:white; 
+  border:1px solid white;
+}
+#show_animated{
+  background-color: rgb(87, 100, 105);
+  color:white; 
+  border:1px solid rgb(87, 100, 105);
+}
+#hide_animated{
+  background-color: rgba(153, 153, 153, 0.377);
+  color:black;
+  border:0;
+}
+#show_animated:hover {box-shadow: 0 0.5em 0.5em 0 rgba(107, 106, 106, 0.24), 0 1em 2em 0 rgba(119, 118, 118, 0.19);}
+#hide_animated:hover {box-shadow: 0 0.5em 0.5em 0 rgba(189, 187, 187, 0.24), 0 1em 2em 0 rgba(180, 179, 179, 0.19);}
+#show_districts{
+  background-color: rgb(87, 100, 105);
+  color:white; 
+  font-size: 14px;
+  padding-right: 20px;
+  box-shadow: 0 0.5em 0.5em 0 rgba(107, 106, 106, 0.253), 0 1em 2em 0 rgba(119, 118, 118, 0.253);
+}
+.fa-map-marker{font-size: 20px;}
+.fa-location-arrow{font-size: 16px; color:rgb(87, 100, 105); margin-left:16px;}
+#show_districts:hover {box-shadow: 0 1em 1em 0 rgba(107, 106, 106, 0.24), 0 1em 2em 0 rgba(119, 118, 118, 0.19);}
+#show_tripadvisor{
+  background-color: rgb(57, 122, 110);
+  color:white; 
+  font-size: 12px;
+  box-shadow: 0 0.5em 0.5em 0 rgba(107, 106, 106, 0.253), 0 1em 2em 0 rgba(119, 118, 118, 0.253);
+}
+#show_tripadvisor:hover {box-shadow: 0 1em 1em 0 rgba(107, 106, 106, 0.24), 0 1em 2em 0 rgba(119, 118, 118, 0.19);}
+/* 按钮 End */
+/* 分割线 */
+.hr_style1{
+  height: 40px; 
+  border-style: dashed; 
+  border-color: rgba(153, 153, 153, 0.8); 
+  border-width: 1px 0 0 0; 
+  border-radius: 30px; 
+  margin-top: 6em;
+  margin-bottom: 4em;
+} 
+.hr_style1:before { 
+  display: block; 
+  content: ""; 
+  height: 40px; 
+  margin-top: -41px; 
+  border-style: dashed; 
+  border-color: rgba(153, 153, 153, 0.8); 
+  border-width: 0 0 1px 0; 
+  border-radius: 30px; 
+}
+/* 分割线 End */
+/* 空白行 */
+.blanklinesm {height:0.5em;}
+.blankline {height:1em;}
+.blanklinemd {height:2em;}
+.blanklinemlg {height:4em;}
+.blanklinelg {height:6em;}
+/* 空白行 End */
