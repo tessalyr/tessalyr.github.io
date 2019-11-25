@@ -31,7 +31,7 @@
 /* navbar */
 .navbar {
   margin:0;
-  background:rgba(87, 100, 105, 0.9);
+  background:rgba(87, 100, 105, 0.95);
 }
 .nav-item {margin-left: 0.3em;}
 .navbar-brand{
@@ -41,6 +41,17 @@
 }
 .nav-link {font-size: 1.1em;} 
 /* navbar End */
+/* second nav*/
+.second_nav{
+  padding: 3em 0 3em 0;
+  margin-bottom: 1.5em;
+  background: rgb(87, 100, 105, 0.1);
+}
+#second_nav_shopping{
+  margin: 5.4em 0 0 0;
+  background: #fff;
+}
+/* second nav End */
 .imgBox{
   background-image:linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.082),rgba(0, 0, 0, 0.555), rgb(0, 0, 0));
 }
@@ -66,32 +77,37 @@
   text-shadow: 0.1em 0.1em 0.3em rgba(125, 156, 182, 0.562);
 }
 /* footer */
-.section_footer{background: rgb(87, 100, 105, 0.9)}
+/* .section_footer{background: rgb(87, 100, 105, 0.9)} */
 .footer-brand{
   font-family: 'WaltographRegular';
-  color:rgb(250, 250, 250);
+  color:rgba(87, 100, 105, 0.8);
 }
 .footer-content{
-  color:rgb(250, 250, 250);
+  color:rgba(87, 100, 105, 0.9);
   word-spacing: 1em;
   font-family: 'Philosopher';
 }
 .fa {color: rgb(250, 250, 250);}
+.fa-instagram{color:rgba(87, 100, 105, 0.9); margin:0 0.25em 0 0.25em}
+.fa-twitter{color:rgba(87, 100, 105, 0.9); margin:0 0.25em 0 0.25em}
+.fa-facebook{color:rgba(87, 100, 105, 0.9); margin:0 0.25em 0 0.25em}
+.fa-pinterest{color:rgba(87, 100, 105, 0.9); margin:0 0.25em 0 0.25em}
 /* footer End */
 .nav-link-title{ 
-  font-size: 1.5em; 
+  font-size: 1.6em; 
   font-family: 'Josefin Sans';
-  color: #555; text-shadow: 0 0 0.1em rgb(190, 199, 204);
+  color: #555; text-shadow: 0 0 0.2em rgb(157, 200, 218);
 } 
-.nav-link-title:hover {color: black;}
+.nav-link-title:hover {color: black; text-shadow: 0 0 0.3em rgb(157, 200, 218);}
 .subtitle {
   color:#666;
   font-family: 'Marcellus SC';
   margin-left:3.3em;
 }
 .video_row {margin:2em 3em 0 3em}
-.video_title {margin-top:0.5em;}
+.video_title {margin-top:0.5em; color:#333}
 .pointer{cursor: pointer;}
+.fa-play-circle{position: relative; margin:0em; padding:0}
 #card_title {
   color:white;
   margin:0;
@@ -143,6 +159,33 @@
 .well{
   height: 40em;
   margin-top: 1em;
+}
+.slide_title{
+  font-family: 'Cinzel';
+  color:#333; text-shadow: 0 0 0.1em rgb(180, 180, 180);
+  margin-bottom: 1em;
+}
+.slide_content{
+  font-size: 1.5em;
+  font-family: 'Josefin Sans';
+  color: #444;
+  margin-bottom: 1em;
+}
+#dolls_slide{
+  margin-top:0;
+  background-image: linear-gradient(rgba(255, 182, 216, 0.7),rgba(255, 182, 216, 0.4), rgba(220, 255, 255, 0.6)), url(https://images.pexels.com/photos/2088203/pexels-photo-2088203.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500); 
+  background-position: right bottom;  
+  background-size: cover; 
+  background-repeat: repeat; 
+  background-attachment: fixed;
+}
+#cosmetics_slide{
+  margin-top:0;
+  background-image: linear-gradient(rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2)), url(https://images.pexels.com/photos/2088203/pexels-photo-2088203.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500); 
+  background-position: right bottom;  
+  background-size: cover; 
+  background-repeat: repeat; 
+  background-attachment: fixed;
 }
 
 
