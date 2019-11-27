@@ -27,12 +27,14 @@
   font-family: 'WaltographRegular';
   color: #555; text-shadow: -0.15em 0.15em 0.1em rgba(172, 72, 72, 0.4);
   font-size: 7.7em;
+  letter-spacing: 0.05em;
 }
 .enterSubTitle {
   font-family: 'Marcellus SC';
-  font-size: 3.3em;
+  font-size: 2.5em;
   color: #666; text-shadow: -0.2em 0.2em 0.2em rgba(172, 72, 72, 0.5);
   margin-top:1em;
+  letter-spacing: 0.2em;
 }
 .enterLink {
   font-family: 'Marcellus SC';
@@ -51,13 +53,14 @@
 /* navbar */
 .navbar {
   margin:0;
-  background:rgba(101, 116, 122, 0.95);
+  background:rgb(219, 162, 185);
 }
 .nav-item {margin-left: 0.3em;}
 .navbar-brand{
   font-family: 'WaltographRegular';
   font-size: x-large;
   padding-top: 16px;
+  letter-spacing: 0.03em;
 }
 .nav-link {font-size: 1.1em;} 
 /* navbar End */
@@ -78,14 +81,14 @@
 .imgBox img {mix-blend-mode:multiply;}
 .newsTitle{
   margin-bottom:0.5em;
-  font-size: 4em;
+  font-size: 3em;
   font-family: 'Josefin Sans';
   color: #fff; text-shadow: 0.1em -0.1em 0.1em black;
 }
 .newsContent {
   margin-top:1em;
   margin-bottom:0.3em;
-  font-size:1.6em;
+  font-size:1.5em;
   color: #fff; text-shadow: 0.1em -0.1em 0.25em black;
 }
 .newsAuthor {
@@ -102,17 +105,19 @@
   font-size: 1.5em;
   text-align: center;
   font-family: 'Josefin Sans';
-  color: #444; text-shadow: 0 0 0.1em rgb(180, 180, 180);
+  color: #333; text-shadow: 0 0 0.1em rgb(180, 180, 180);
+  background: rgb(219, 162, 185, 0.15);
 }
 .shadow:hover {
-  color: black;
-  text-shadow: 0.1em 0.1em 0.3em rgba(125, 156, 182, 0.562);
+  color: #111; text-shadow: 0.1em 0.1em 0.3em rgba(125, 156, 182, 0.562);
+  background: #fff;
 }
 /* footer */
 .footer-brand{
   font-family: 'WaltographRegular';
   color:rgba(87, 100, 105, 0.8);
-  margin-top:3em
+  margin-top:3em;
+  letter-spacing: 0.03em;
 }
 .footer-content{
   color:rgba(87, 100, 105, 0.9);
@@ -209,7 +214,7 @@
   background-image: linear-gradient(rgba(245, 196, 219, 0.329), rgba(185, 240, 253, 0.6)),  url('https://images.unsplash.com/photo-1508020268086-b96cf4f4bb2e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1650&q=80');
 }
 #map{
-  height: 460px; 
+  height: 38em; 
   width: 100%;
   bottom:0;
   left:0;

@@ -11,7 +11,7 @@ body {background:rgba(250,250,250); color:#333;}   /* 重置body 页面背景颜
 body,th,td,input,select,textarea,button {font-size:12px;line-height:1 ;font-family:'Merriweather Sans','Questrial', 'Montserrat', 'Josefin Sans', sans-serif;color:#666} /* 重置页面文字属性 */
 a {color:#666;text-decoration:none}  /* 重置链接a标签 */
 a:active, a:hover {text-decoration:none}   /* 重置链接a标签的鼠标滑动效果 */
-a:hover{color:rgb(255, 255, 255);text-shadow: 0 0 0.2em rgb(190, 190, 190)}
+a:hover{color:rgb(255, 255, 255);text-shadow: 0 0 0.1em rgb(216, 216, 216)}
 address,caption,cite,code,dfn,em,var {font-style:normal;font-weight:normal}  /* 重置样式标签的样式 */
 caption {display:none;}    /* 重置表格标题为隐藏 */
 table {width:100%;border-collapse:collapse;border-spacing:0;table-layout:fixed;}    /* 重置table属性 */
