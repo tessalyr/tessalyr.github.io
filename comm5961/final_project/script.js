@@ -1,4 +1,26 @@
 $(document).ready(function(){
+  $("button#show_animated").click(function(){
+      $("#airtable_animated").show();
+  });
+});
+$(document).ready(function(){
+  $("button#hide_animated").click(function(){
+      $("#airtable_animated").hide();
+  });
+});
+
+$(document).ready(function(){
+  $("button#show_remake").click(function(){
+      $("#actresses").show();
+  });
+});
+$(document).ready(function(){
+  $("button#hide_remake").click(function(){
+      $("#actresses").hide();
+  });
+});
+
+$(document).ready(function(){
   $("button#show_airtable").click(function(){
       $("#airtable_actress").show();
   });

@@ -18,29 +18,12 @@
         <link href="//cdnjs.cloudflare.com/ajax/libs/c3/0.1.29/c3.css" rel="stylesheet" type="text/css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.min.css">
         <link href="//cdnjs.cloudflare.com/ajax/libs/c3/0.1.29/c3.css" rel="stylesheet" type="text/css">
-        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
+
+        <link rel="stylesheet" href="custom.css">        
         <link rel="stylesheet" href="style.css">
-        <link rel="stylesheet" href="custom.css">
         <title>Disney Princess World</title>
         <link rel="stylesheet" media="screen" href="https://fontlibrary.org/face/waltograph" type="text/css">
-        <style>
-              .btn{
-                  width:85%;
-              }
-              .overlay {
-                  position: absolute;
-                  display: flex;
-                  top: 0;
-                  bottom: 0;
-                  left: 0;
-                  right: 0;
-                  align-items: center;
-                  justify-content: center;
-                  flex-direction: column;
-                  color: rgb(0, 0, 0);
-                  text-align: center;
-              }
-        </style>
         
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-153192597-1"></script>
@@ -54,25 +37,83 @@
     </head>
     
     <body>
-        <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel"
-        data-interval="3000">
+        <div class="overlay1">
+            <img src="https://image.flaticon.com/icons/svg/1/1010.svg" class="disney_icon">
+            <h1 class="enterTitle">Disney Princess World</h1>
+            <h2 class="enterSubTitle">- Disney Princess Cultural Study Website -</h2>
+            <a class="enterLink" href="overview.html"><i class="et-right et-square-o-right fa fa-2x fa-flip-vertical fa-fw fa-play"></i>Explore</a>
+        </div>
+        <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel" data-interval="3000">
             <div class="carousel-inner">
                 <div class="carousel-item active">
-                    <img src="https://ohmy.disney.com/wp-content/uploads/2016/03/Beauty-and-the-Beast-dance-GIF.gif"
-                    class="d-block w-100" alt="...">
-                </div>
-                <div class="carousel-item">
-                    <img src="https://ohmy.disney.com/wp-content/uploads/2016/07/littlemermaiddinglehopper.gif"
+                    <img src="https://images.pexels.com/photos/1831234/pexels-photo-1831234.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
                     class="d-block w-100" alt="...">
                 </div>
             </div>
         </div>
-        <div class="overlay">
-            <h1 class="enterTitle">Disney Princess World</h1>
-            <div class="container d-flex justify-content-center align-items-start col-sm-12">
-                <a class="enterLink" href="home.html"><i class="et-right et-square-o-right fa fa-2x fa-flip-vertical fa-fw fa-play"></i>Explore</a>
-            </div>
-        </div>
+        
+        <script>
+            var colors = new Array(
+  [62,35,255],
+  [60,255,60],
+  [255,35,98],
+  [45,175,230],
+  [255,0,255],
+  [255,128,0]);
+
+var step = 0;
+//color table indices for: 
+// current color left
+// next color left
+// current color right
+// next color right
+var colorIndices = [0,1,2,3];
+
+//transition speed
+var gradientSpeed = 0.002;
+
+function updateGradient()
+{
+  
+  if ( $===undefined ) return;
+  
+var c0_0 = colors[colorIndices[0]];
+var c0_1 = colors[colorIndices[1]];
+var c1_0 = colors[colorIndices[2]];
+var c1_1 = colors[colorIndices[3]];
+
+var istep = 1 - step;
+var r1 = Math.round(istep * c0_0[0] + step * c0_1[0]);
+var g1 = Math.round(istep * c0_0[1] + step * c0_1[1]);
+var b1 = Math.round(istep * c0_0[2] + step * c0_1[2]);
+var color1 = "rgb("+r1+","+g1+","+b1+")";
+
+var r2 = Math.round(istep * c1_0[0] + step * c1_1[0]);
+var g2 = Math.round(istep * c1_0[1] + step * c1_1[1]);
+var b2 = Math.round(istep * c1_0[2] + step * c1_1[2]);
+var color2 = "rgb("+r2+","+g2+","+b2+")";
+
+ $('#gradient').css({
+   background: "-webkit-gradient(linear, left top, right top, from("+color1+"), to("+color2+"))"}).css({
+    background: "-moz-linear-gradient(left, "+color1+" 0%, "+color2+" 100%)"});
+  
+  step += gradientSpeed;
+  if ( step >= 1 )
+  {
+    step %= 1;
+    colorIndices[0] = colorIndices[1];
+    colorIndices[2] = colorIndices[3];
+    
+    //pick two new target color indices
+    //do not pick the same as the current one
+    colorIndices[1] = ( colorIndices[1] + Math.floor( 1 + Math.random() * (colors.length - 1))) % colors.length;
+    colorIndices[3] = ( colorIndices[3] + Math.floor( 1 + Math.random() * (colors.length - 1))) % colors.length;
+    
+  }
+}
+
+setInterval(updateGradient,10);
+        </script>
 
         <script src="script.js"></script>
         <!-- Optional JavaScript -->
