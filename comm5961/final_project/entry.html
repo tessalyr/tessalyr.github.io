@@ -37,95 +37,22 @@
     </head>
     
     <body>
-        <div class="overlay1">
+        <div class="overlay1 col-xs-10 col-md-12">
             <img src="https://image.flaticon.com/icons/svg/1/1010.svg" class="disney_icon">
             <h1 class="enterTitle">DisneyPrincessWorld</h1>
-            <h3 class="enterSubTitle">- Disney Princess Cultural Study Website -</h3>
+            <h3 class="enterSubTitle"><b>Disney Princess Cultural Study Website</b></h3>
             <a class="enterLink" href="overview.html"><i class="et-right et-square-o-right fa fa-2x fa-flip-vertical fa-fw fa-play"></i>Explore</a>
         </div>
         <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel" data-interval="3000">
             <div class="carousel-inner">
                 <div class="carousel-item active">
                     <img src="https://images.pexels.com/photos/1831234/pexels-photo-1831234.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
-                    class="d-block w-100" alt="...">
+                    class="d-block">
                 </div>
             </div>
         </div>
         
-        <script>
-            var colors = new Array(
-  [62,35,255],
-  [60,255,60],
-  [255,35,98],
-  [45,175,230],
-  [255,0,255],
-  [255,128,0]);
-
-var step = 0;
-//color table indices for: 
-// current color left
-// next color left
-// current color right
-// next color right
-var colorIndices = [0,1,2,3];
-
-//transition speed
-var gradientSpeed = 0.002;
-
-function updateGradient()
-{
-  
-  if ( $===undefined ) return;
-  
-var c0_0 = colors[colorIndices[0]];
-var c0_1 = colors[colorIndices[1]];
-var c1_0 = colors[colorIndices[2]];
-var c1_1 = colors[colorIndices[3]];
-
-var istep = 1 - step;
-var r1 = Math.round(istep * c0_0[0] + step * c0_1[0]);
-var g1 = Math.round(istep * c0_0[1] + step * c0_1[1]);
-var b1 = Math.round(istep * c0_0[2] + step * c0_1[2]);
-var color1 = "rgb("+r1+","+g1+","+b1+")";
-
-var r2 = Math.round(istep * c1_0[0] + step * c1_1[0]);
-var g2 = Math.round(istep * c1_0[1] + step * c1_1[1]);
-var b2 = Math.round(istep * c1_0[2] + step * c1_1[2]);
-var color2 = "rgb("+r2+","+g2+","+b2+")";
-
- $('#gradient').css({
-   background: "-webkit-gradient(linear, left top, right top, from("+color1+"), to("+color2+"))"}).css({
-    background: "-moz-linear-gradient(left, "+color1+" 0%, "+color2+" 100%)"});
-  
-  step += gradientSpeed;
-  if ( step >= 1 )
-  {
-    step %= 1;
-    colorIndices[0] = colorIndices[1];
-    colorIndices[2] = colorIndices[3];
-    
-    //pick two new target color indices
-    //do not pick the same as the current one
-    colorIndices[1] = ( colorIndices[1] + Math.floor( 1 + Math.random() * (colors.length - 1))) % colors.length;
-    colorIndices[3] = ( colorIndices[3] + Math.floor( 1 + Math.random() * (colors.length - 1))) % colors.length;
-    
-  }
-}
-
-setInterval(updateGradient,10);
-        </script>
-
+      
         <script src="script.js"></script>
-        <!-- Optional JavaScript -->
-        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-        crossorigin="anonymous"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
-        crossorigin="anonymous"></script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-        crossorigin="anonymous"></script>
     </body>
-
 </html>

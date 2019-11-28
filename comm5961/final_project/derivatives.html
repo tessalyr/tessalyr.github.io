@@ -5,16 +5,17 @@
   <!-- Required meta tags -->
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <!--DataTables-->
-  <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
-  <script src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js"></script>
-  <script src="https://cdn.datatables.net/1.10.20/js/dataTables.bootstrap4.min.js"></script>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.css">
-  <link rel="stylesheet" href="https://cdn.datatables.net/1.10.20/css/dataTables.bootstrap4.min.css">
   <!--C3,D3-->
   <link rel="stylesheet" href="c3-0.7.10/c3.css">
   <script src="c3-0.7.10/c3.min.js"></script>
   <script src="c3-0.7.10/d3.v5.min.js" charset="utf-8"></script>
+  <!--DataTables-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.css">
+  <link rel="stylesheet" href="https://cdn.datatables.net/1.10.20/css/dataTables.bootstrap4.min.css">
+  <link rel="stylesheet" href="https://cdn.datatables.net/1.10.20/css/jquery.dataTables.min.css">
+  <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+  <script src="https://cdn.datatables.net/1.10.20/js/dataTables.bootstrap4.min.js"></script>
+  <script src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js"></script>
   <!-- Bootstrap CDN -->
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
   <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
@@ -25,11 +26,16 @@
   <link href="//cdnjs.cloudflare.com/ajax/libs/c3/0.1.29/c3.css" rel="stylesheet" type="text/css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.min.css">
   <link href="//cdnjs.cloudflare.com/ajax/libs/c3/0.1.29/c3.css" rel="stylesheet" type="text/css">
+
   <!--My Settings-->
   <link rel="stylesheet" href="custom.css">
   <link rel="stylesheet" href="style.css">
   <title>Disney Princess World</title>
   <link rel="stylesheet" media="screen" href="https://fontlibrary.org/face/waltograph" type="text/css">
+
+  <link rel="stylesheet" href="https://cdn.datatables.net/1.10.20/css/jquery.dataTables.min.css">
+  <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+  <script src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js"></script>
 
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-153192597-1"></script>
@@ -45,32 +51,35 @@
 <body data-spy="scroll">
   <!--Navbar-->
   <nav class="navbar navbar-fixed-top navbar-expand-md navbar-dark">
-    <div class="col-md-7 col-lg-8 col-xl-9">
-      <a class="navbar-brand" href="entry.html">DisneyPrincessWorld</a>
-    </div>
-    <div class="collapse navbar-collapse">
-      <ul class="navbar-nav mr-auto">
-        <li class="nav-item">
-          <a class="nav-link" href="overview.html">Overview</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="movies.html">Movies</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="themepark.html">Theme Park</a>
-        </li>
-        <li class="nav-item active">
-          <a class="nav-link" href="derivatives.html">Derivatives <span class="sr-only">(current)</span></a>
-        </li>
-      </ul>
-    </div>
+      <div class="col-xs-12 col-md-7 col-lg-8 col-xl-9 d-flex justify-content-between">
+          <a class="navbar-brand" href="entry.html">DisneyPrincessWorld</a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+          </button>
+      </div>     
+      <div class="collapse navbar-collapse"  id="navbarTogglerDemo02">
+          <ul class="navbar-nav mr-auto  mt-2 mt-lg-0">
+              <li class="nav-item">
+                  <a class="nav-link" href="overview.html">Overview</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="movies.html">Movies</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="themepark.html">Theme Park</a>
+              </li>
+              <li class="nav-item active">
+                  <a class="nav-link" href="derivatives.html">Derivatives <span class="sr-only">(current)</span></a>
+              </li>
+          </ul>
+      </div>
   </nav>
   <!--Navebar End-->
   <div class="blanklinemlg"></div><div class="blankline"></div>
   <!--text-->
   <div class="card text-center">
       <div class="card-header text_header">
-          <h3 class="card-title text_title">Disney Princess Derivatives</h3>
+          <h3 class="card-title text_title text-center">Disney Princess Derivatives</h3>
       </div>
       <div class="card-body text_body">
           <p class="card-text text_content">Disney Princess franchise has released dolls, sing-along videos, apparel, beauty products, home decor, toys and a variety of other products featuring some of the Disney Princesses. Licensees for the franchise include Glidden (wall paint), Stride Rite (sparkly shoes), Hasbro (games and dolls), and Fisher-Price (plastic figurines).</p>
@@ -79,7 +88,7 @@
           <div class="blanklinesm"></div>
       </div>
       <div class="card-footer text-muted text_footer">
-          <ul class="nav justify-content-start">
+          <ul class="nav justify-content-center">
               <li class="nav-item">
                   <a class="nav-link-title active" href="#dolls_slide">Dolls</a>
               </li>
@@ -93,7 +102,6 @@
       </div>
   </div>
   <!--text End-->
-
   <!--slide1-->
   <div class="py-5" id="dolls_slide">
     <div class="container">
@@ -138,6 +146,59 @@
     </div>
   </div>
   <!--DataTable: Dolls End-->
+
+
+  <table id="example" class="display" style="width:100%">
+      <thead>
+          <tr>
+              <th>Name</th>
+              <th>Position</th>
+              <th>Office</th>
+              <th>Age</th>
+              <th>Start date</th>
+              <th>Salary</th>
+          </tr>
+      </thead>
+      <tbody>
+          <tr>
+              <td>Tiger Nixon</td>
+              <td>System Architect</td>
+              <td>Edinburgh</td>
+              <td>61</td>
+              <td>2011/04/25</td>
+              <td>$320,800</td>
+          </tr>
+          <tr>
+              <td>Garrett Winters</td>
+              <td>Accountant</td>
+              <td>Tokyo</td>
+              <td>63</td>
+              <td>2011/07/25</td>
+              <td>$170,750</td>
+          </tr>
+          <tr>
+              <td>Donna Snider</td>
+              <td>Customer Support</td>
+              <td>New York</td>
+              <td>27</td>
+              <td>2011/01/25</td>
+              <td>$112,000</td>
+          </tr>
+      </tbody>
+      <tfoot>
+          <tr>
+              <th>Name</th>
+              <th>Position</th>
+              <th>Office</th>
+              <th>Age</th>
+              <th>Start date</th>
+              <th>Salary</th>
+          </tr>
+      </tfoot>
+  </table>
+
+
+
   <!--Blank before backgroud-image-->
   <div class="banner" id="banner" data-interval="false" data-ride="carousel">
       <div class="carousel-inner"><div class="item active"></div></div>
@@ -226,46 +287,40 @@
       </div>
     </div>
     DataTable: Cosmetics End-->
-    <!--Footer-->
-    <footer class="section section_footer">
-      <div class="container">
-        <div class="row d-flex justify-content-center">
-          <div class="col-sm-12 d-flex justify-content-center">
-            <h3 class="footer-brand">DisneyPrincessWorld</h3>
-          </div>
-          <div class="col-sm-12 d-flex justify-content-center">
-            <h5 class="footer-content">
-              <div class="blankline"></div>Overview Movies ThemePark Derivatives
-            </h5>
-          </div>
-          <div class="col-md-12">
-            <hr>
-          </div>
-          <div class="col-sm-12 d-flex justify-content-center">
+  <!--Footer-->
+  <footer class="section section_footer">
+    <div class="container">
+      <div class="row d-flex justify-content-center">
+        <div class="col-sm-12 d-flex justify-content-center">
+          <h3 class="footer-brand">DisneyPrincessWorld</h3>
+        </div>
+        <div class="col-sm-12 d-flex justify-content-center">
+          <h5 class="footer-content"><div class="blankline"></div>
+              <a class= "footer_navlink" href="overview.html">Overview</a> <a class= "footer_navlink" href="movies.html">Movies</a> <a class= "footer_navlink" href="themepark.html">ThemePark</a> <a class= "footer_navlink" href="derivatives.html">Derivatives</a></h5>
+        </div>
+        <div class="col-md-12">
+          <hr>
+        </div>
+        <div class="col-sm-12 d-flex justify-content-center">
+          <div class="row">
             <div class="row">
-              <div class="row">
-                <div class="col-sm-12 text-right">
-                  <a href="https://www.instagram.com/disney/?hl=en" target="_blank"><i class="fa fa-2x fa-fw fa-instagram pull-left text-inverse"></i></a>
-                  <a href="https://twitter.com/Disney?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor" target="_blank"><i class="fa fa-2x fa-fw fa-twitter text-inverse"></i></a>
-                  <a href="https://www.facebook.com/Disney/" target="_blank"><i class="fa fa-2x fa-facebook fa-fw pull-left text-inverse"></i></a>
-                  <a href="https://www.pinterest.com/Disney/" target="_blank"><i class="fa fa-2x fa-fw hub pull-right text-inverse fa-pinterest"></i></a>
-                  <div class="blanklinemd"></div>
-                  <div class="blanklinemd"></div>
-                </div>
+              <div class="col-sm-12 text-right">
+                <a href="https://www.instagram.com/disney/?hl=en" target="_blank"><i class="fa fa-2x fa-fw fa-instagram pull-left text-inverse"></i></a>
+                <a href="https://twitter.com/Disney?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor" target="_blank"><i class="fa fa-2x fa-fw fa-twitter text-inverse"></i></a>
+                <a href="https://www.facebook.com/Disney/" target="_blank"><i class="fa fa-2x fa-facebook fa-fw pull-left text-inverse"></i></a>
+                <a href="https://www.pinterest.com/Disney/" target="_blank"><i class="fa fa-2x fa-fw hub pull-right text-inverse fa-pinterest"></i></a>
+                <div class="blanklinemd"></div>
+                <div class="blanklinemd"></div>
               </div>
             </div>
           </div>
         </div>
       </div>
-    </footer>
-    <!--Footer End-->
-    <script src="script.js"></script>
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-  </div>
+    </div>
+  </footer>
+  <!--Footer End-->
+
+  <script src="script.js"></script>
 </body>
 
 </html>

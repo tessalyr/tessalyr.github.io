@@ -85,3 +85,8 @@ $(document).ready(function(){
    }); // end button
 
 }); // document ready
+
+
+$(document).ready(function() {
+    $('#example').DataTable();
+} );

@@ -5,10 +5,8 @@
 .overlay1 {
   position: fixed;
   display: flex;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
+  margin: 0 0 0 0;
+  padding: 0 2em 0 2em;
   width: 100%;
   height: 100%;
   z-index: 10;
@@ -19,33 +17,34 @@
   text-align: center;
 }
 .disney_icon{
-  width:5em;
+  width: 4em;
   margin-bottom:4em;
-  filter: invert(33%) sepia(1%) saturate(0%) hue-rotate(139deg) brightness(102%) contrast(103%);
+  filter: invert(33%) sepia(72%) saturate(10%) hue-rotate(314deg) brightness(100%) contrast(88%);
 }
 .enterTitle {
   font-family: 'WaltographRegular';
-  color: #555; text-shadow: -0.15em 0.15em 0.1em rgba(172, 72, 72, 0.4);
-  font-size: 7.7em;
+  color: #666; text-shadow: -0.1em 0.1em 0.1em rgba(172, 72, 72, 0.4);
+  font-size: 6vw;
   letter-spacing: 0.05em;
 }
 .enterSubTitle {
   font-family: 'Marcellus SC';
-  font-size: 2.5em;
+  font-size: 2.6em;
   color: #666; text-shadow: -0.2em 0.2em 0.2em rgba(172, 72, 72, 0.5);
   margin-top:1em;
   letter-spacing: 0.2em;
+  line-height: 1.5em;
 }
 .enterLink {
   font-family: 'Marcellus SC';
-  font-size: 2.5em;
-  color: #555; text-shadow: -0.05em 0.05em 0.5em rgba(172, 72, 72, 0.8);
-  margin-top: 2.5em;
+  font-size: 2em;
+  color: #666; text-shadow: 0.05em 0.05em 2em rgba(255, 34, 34, 0.8);
+  margin-top: 3em;
 }
 .enterLink:hover {color:#555}
 .fa {color: rgb(250, 250, 250)} /* icon颜色 */
 .fa-flip-vertical {
-  color:#555;
+  color:#666;
   margin-right: 0.3em;
 }
 
@@ -53,16 +52,19 @@
 /* navbar */
 .navbar {
   margin:0;
-  background:rgb(219, 162, 185);
+  background:rgb(206, 159, 178);
 }
 .nav-item {margin-left: 0.3em;}
 .navbar-brand{
   font-family: 'WaltographRegular';
   font-size: x-large;
-  padding-top: 16px;
+  padding-top: 0.7em;
   letter-spacing: 0.03em;
 }
 .nav-link {font-size: 1.1em;} 
+.navbar-toggler{
+  margin: 1em
+}
 /* navbar End */
 /* second nav*/
 .second_nav{
@@ -106,7 +108,7 @@
   text-align: center;
   font-family: 'Josefin Sans';
   color: #333; text-shadow: 0 0 0.1em rgb(180, 180, 180);
-  background: rgb(219, 162, 185, 0.15);
+  background: rgba(228, 151, 181, 0.15);
 }
 .shadow:hover {
   color: #111; text-shadow: 0.1em 0.1em 0.3em rgba(125, 156, 182, 0.562);
@@ -116,18 +118,19 @@
 .footer-brand{
   font-family: 'WaltographRegular';
   color:rgba(87, 100, 105, 0.8);
-  margin-top:3em;
+  margin:3em 0 0.2em 0;
   letter-spacing: 0.03em;
 }
 .footer-content{
-  color:rgba(87, 100, 105, 0.9);
+  color:rgba(87, 100, 105, 0.8);
   word-spacing: 1em;
   font-family: 'Philosopher';
 }
-.fa-instagram{color:rgba(87, 100, 105, 0.9); margin:0 0.25em 0 0.25em}
-.fa-twitter{color:rgba(87, 100, 105, 0.9); margin:0 0.25em 0 0.25em}
-.fa-facebook{color:rgba(87, 100, 105, 0.9); margin:0 0.25em 0 0.25em}
-.fa-pinterest{color:rgba(87, 100, 105, 0.9); margin:0 0.25em 0 0.25em}
+.footer_navlink:hover{color:rgb(206, 159, 178)}
+.fa-instagram{color:rgba(87, 100, 105, 0.9); margin:0 0.25em 0 0.25em} .fa-instagram:hover{color:rgb(206, 159, 178)}
+.fa-twitter{color:rgba(87, 100, 105, 0.9); margin:0 0.25em 0 0.25em} .fa-twitter:hover{color:rgb(206, 159, 178)}
+.fa-facebook{color:rgba(87, 100, 105, 0.9); margin:0 0.25em 0 0.25em} .fa-facebook:hover{color:rgb(206, 159, 178)}
+.fa-pinterest{color:rgba(87, 100, 105, 0.9); margin:0 0.25em 0 0.25em} .fa-pinterest:hover{color:rgb(206, 159, 178)}
 /* footer End */
 /* card End */
 #card_title {
@@ -152,27 +155,26 @@
   color: #444; text-shadow: 0 0 0.1em rgb(180, 180, 180);
 }
 .text_header{
-  background:rgba(87, 100, 105, 0.2);
+  background:rgba(87, 100, 105, 0.1);
 }
 .text_body{
   background:rgba(87, 100, 105, 0.1);
-  height:18em; 
+  height:20em; 
   float:left; 
   overflow-y: scroll
 }
 .text_footer{
   background:rgba(87, 100, 105, 0.15);
-  padding-left:9.5%;
 }
 .text_title{
-  margin: 0.7em 10% 0.5em 10%;
+  margin: 0.7em 12% 0.5em 12%;
   text-align: left;
 }
 .text_content{
   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
   font-size: 1.6em;
   line-height: 1.6em;
-  margin: 1em 10% 1em 10%;
+  margin: 1em 10vw 1em 10vw;
   text-align: left;
   color: #444; text-shadow: 0 0 0;
 }
@@ -196,7 +198,7 @@
   position: absolute;
   display: flex;
   top: 0;
-  bottom: 1em;
+  bottom: 2em;
   left: 0;
   right: 0;
   z-index: 10;
@@ -231,6 +233,7 @@
 }
 .mb-0{
   font-family: 'Cinzel';
+  font-size: 1.6em;
   color: rgb(47, 66, 63); text-shadow: 0 0 0.1em rgba(180, 180, 180, 0.8);
 }
 .well{

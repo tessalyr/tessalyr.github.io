@@ -34,11 +34,14 @@
     <body>
         <!--Navbar-->
         <nav class="navbar navbar-fixed-top navbar-expand-md navbar-dark">
-            <div class="col-md-7 col-lg-8 col-xl-9">
+            <div class="col-xs-12 col-md-7 col-lg-8 col-xl-9 d-flex justify-content-between">
                 <a class="navbar-brand" href="entry.html">DisneyPrincessWorld</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
             </div>     
-            <div class="collapse navbar-collapse">
-                <ul class="navbar-nav mr-auto">
+            <div class="collapse navbar-collapse"  id="navbarTogglerDemo02">
+                <ul class="navbar-nav mr-auto  mt-2 mt-lg-0">
                     <li class="nav-item active">
                         <a class="nav-link" href="overview.html">Overview <span class="sr-only">(current)</span></a>
                     </li>
@@ -122,7 +125,7 @@
         <!--text-->
         <div class="card text-center">
             <div class="card-header text_header">
-                <h3 class="card-title text_title">Overview for Disney Princess Culture</h3>
+                <h3 class="card-title text_title text-center">Overview for Disney Princess Culture</h3>
             </div>
             <div class="card-body text_body">
                 <p class="card-text text_content">Disney Princess, also called the Princess Line, is a media franchise and toy-line owned by The Walt Disney Company. Created by Disney Consumer Products chairman Andy Mooney in the early 2000s, the franchise features a line-up of fictional female protagonists who have appeared in various Disney franchises.</p>
@@ -132,7 +135,7 @@
                 <div class="blanklinesm"></div>
             </div>
             <div class="card-footer text-muted text_footer">
-                <ul class="nav justify-content-start">
+                <ul class="nav justify-content-center">
                     <li class="nav-item">
                         <a class="nav-link-title active" href="#section1">Official Princess</a>
                     </li>
@@ -154,7 +157,7 @@
                     <div class="col-md-12">
                         <h1 class="text-center">Official Princess</h1>
                         <div class="blankline"></div>
-                        <p class="text-center lead">The evolution of official princesses - click to know more about her</p>
+                        <p class="text-center lead">Click to know more about each official princesses.</p>
                     </div>
                 </div>
                 <div class="blanklinemd"></div>
@@ -284,7 +287,7 @@
                     <div class="col-md-12">
                         <h1 class="text-center">Unofficial Princess</h1>
                         <div class="blankline"></div>
-                        <p class="text-center lead">The evolution of unofficial princesses - click to know more about her</p>
+                        <p class="text-center lead">Click to know more about each unofficial princess.</p>
                     </div>
                 </div>
                 <div class="blanklinemd"></div>
@@ -407,6 +410,7 @@
             </div>
         </div>
         <!--Unofficial Princess End-->
+
         <!--Footer-->
         <footer class="section section_footer">
             <div class="container">
@@ -415,7 +419,8 @@
                         <h3 class="footer-brand">DisneyPrincessWorld</h3>
                     </div>
                     <div class="col-sm-12 d-flex justify-content-center">
-                        <h5 class="footer-content"><div class="blankline"></div>Overview Movies ThemePark Derivatives</h5>
+                        <h5 class="footer-content"><div class="blankline"></div>
+                            <a class= "footer_navlink" href="overview.html">Overview</a> <a class= "footer_navlink" href="movies.html">Movies</a> <a class= "footer_navlink" href="themepark.html">ThemePark</a> <a class= "footer_navlink" href="derivatives.html">Derivatives</a></h5>
                     </div>
                     <div class="col-md-12"><hr></div>
                     <div class="col-sm-12 d-flex justify-content-center">
@@ -437,16 +442,6 @@
         <!--Footer End-->
         
         <script src="script.js"></script>
-        <!-- Optional JavaScript -->
-        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-        crossorigin="anonymous"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
-        crossorigin="anonymous"></script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-        crossorigin="anonymous"></script>
     </body>
 
 </html>

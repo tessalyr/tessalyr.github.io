@@ -51,25 +51,28 @@
 <body data-spy="scroll">
   <!--Navbar-->
   <nav class="navbar navbar-fixed-top navbar-expand-md navbar-dark">
-    <div class="col-md-7 col-lg-8 col-xl-9">
-      <a class="navbar-brand" href="entry.html">DisneyPrincessWorld</a>
-    </div>
-    <div class="collapse navbar-collapse">
-      <ul class="navbar-nav mr-auto">
-        <li class="nav-item">
-          <a class="nav-link" href="overview.html">Overview</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="movies.html">Movies</a>
-        </li>
-        <li class="nav-item active">
-          <a class="nav-link" href="themepark.html">Theme Park <span class="sr-only">(current)</span></a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="derivatives.html">Derivatives</a>
-        </li>
-      </ul>
-    </div>
+      <div class="col-xs-12 col-md-7 col-lg-8 col-xl-9 d-flex justify-content-between">
+          <a class="navbar-brand" href="entry.html">DisneyPrincessWorld</a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+          </button>
+      </div>     
+      <div class="collapse navbar-collapse"  id="navbarTogglerDemo02">
+          <ul class="navbar-nav mr-auto  mt-2 mt-lg-0">
+              <li class="nav-item">
+                  <a class="nav-link" href="overview.html">Overview</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="movies.html">Movies</a>
+              </li>
+              <li class="nav-item active">
+                  <a class="nav-link" href="themepark.html">Theme Park <span class="sr-only">(current)</span></a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="derivatives.html">Derivatives</a>
+              </li>
+          </ul>
+      </div>
   </nav>
   <!--Navebar End-->
   <!--Map-->
@@ -159,7 +162,7 @@
                   </div>
                 </div>
                 <div class="d-flex justify-content-around">
-                   <h5 class="mb-0" style="margin-top:1em">Overview &amp; Review</h5>
+                   <h5 class="mb-0" style="margin-top:1em; font-size:1.2em">Overview &amp; Review</h5>
                    <button class="btn" data-toggle="collapse" data-target="#target1" id="show_tripadvisor">tripadvisor.com</button>
                 </div>
                 <div class="collapse" id="target1">
@@ -182,7 +185,7 @@
                   </div>
                 </div>
                 <div class="d-flex justify-content-around">
-                   <h5 class="mb-0" style="margin-top:1em">Overview &amp; Review</h5>
+                   <h5 class="mb-0" style="margin-top:1em; font-size:1.2em">Overview &amp; Review</h5>
                    <button class="btn" data-toggle="collapse" data-target="#target2" id="show_tripadvisor">tripadvisor.com</button>
                 </div>
                 <div class="collapse" id="target2">
@@ -205,7 +208,7 @@
                   </div>
                 </div>
                 <div class="d-flex justify-content-around">
-                   <h5 class="mb-0" style="margin-top:1em">Overview &amp; Review</h5>
+                   <h5 class="mb-0" style="margin-top:1em; font-size:1.2em">Overview &amp; Review</h5>
                    <button class="btn" data-toggle="collapse" data-target="#target3" id="show_tripadvisor">tripadvisor.com</button>
                 </div>
                 <div class="collapse" id="target3">
@@ -228,7 +231,7 @@
                   </div>
                 </div>
                 <div class="d-flex justify-content-around">
-                   <h5 class="mb-0" style="margin-top:1em">Overview &amp; Review</h5>
+                   <h5 class="mb-0" style="margin-top:1em; font-size:1.2em">Overview &amp; Review</h5>
                    <button class="btn" data-toggle="collapse" data-target="#target4" id="show_tripadvisor">tripadvisor.com</button>
                 </div>
                 <div class="collapse" id="target4">
@@ -251,7 +254,7 @@
                   </div>
                 </div>
                 <div class="d-flex justify-content-around">
-                   <h5 class="mb-0" style="margin-top:1em">Overview &amp; Review</h5>
+                   <h5 class="mb-0" style="margin-top:1em; font-size:1.2em">Overview &amp; Review</h5>
                    <button class="btn" data-toggle="collapse" data-target="#target5" id="show_tripadvisor">tripadvisor.com</button>
                 </div>
                 <div class="collapse" id="target5">
@@ -274,7 +277,7 @@
                   </div>
                 </div>
                 <div class="d-flex justify-content-around">
-                   <h5 class="mb-0" style="margin-top:1em">Overview &amp; Review</h5>
+                   <h5 class="mb-0" style="margin-top:1em; font-size:1.2em">Overview &amp; Review</h5>
                    <button class="btn" data-toggle="collapse" data-target="#target6" id="show_tripadvisor">tripadvisor.com</button>
                 </div>
                 <div class="collapse" id="target6">
@@ -309,9 +312,8 @@
           <h3 class="footer-brand">DisneyPrincessWorld</h3>
         </div>
         <div class="col-sm-12 d-flex justify-content-center">
-          <h5 class="footer-content">
-            <div class="blankline"></div>Overview Movies ThemePark Derivatives
-          </h5>
+          <h5 class="footer-content"><div class="blankline"></div>
+              <a class= "footer_navlink" href="overview.html">Overview</a> <a class= "footer_navlink" href="movies.html">Movies</a> <a class= "footer_navlink" href="themepark.html">ThemePark</a> <a class= "footer_navlink" href="derivatives.html">Derivatives</a></h5>
         </div>
         <div class="col-md-12">
           <hr>
@@ -334,6 +336,7 @@
     </div>
   </footer>
   <!--Footer End-->
+
   <!--Map Script-->
   <script src="https://unpkg.com/leaflet@1.5.1/dist/leaflet.js"></script>
   <script>
@@ -341,7 +344,7 @@
       attribution: 'Map data &copy; <a href="https://openstreetmap.org">OpenStreetMap</a>',
       maxZoom: 18,
     });
-    var map = L.map('map').addLayer(mapboxTiles).setView([32.386687, -98.964003], 3.5);
+    var map = L.map('map').addLayer(mapboxTiles).setView([28.420958, -81.580962], 16);
     var items = [];
     var airtable_read_endpoint = "https://api.airtable.com/v0/appOSYiHG82lGNfcb/Princess%20Theme%20Parks?api_key=keywZFkvBIh6rNMwS";
     var data = [];
@@ -372,13 +375,7 @@
       }
     }
   </script>
-  <script src="script.js"></script>
-  <!--Map Script End-->
-  <!-- Optional JavaScript -->
-  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-</body>
 
+  <script src="script.js"></script>
+  </body>
 </html>
