@@ -1,41 +1,19 @@
 $(document).ready(function(){
   $("button#show_animated").click(function(){
-      $("#airtable_animated").show();
+      $("#airtable_animated").toggle();
   });
-});
-$(document).ready(function(){
-  $("button#hide_animated").click(function(){
-      $("#airtable_animated").hide();
-  });
-});
 
-$(document).ready(function(){
   $("button#show_remake").click(function(){
-      $("#actresses").show();
+      $("#actresses").toggle();
   });
-});
-$(document).ready(function(){
-  $("button#hide_remake").click(function(){
-      $("#actresses").hide();
-  });
-});
 
-$(document).ready(function(){
   $("button#show_airtable").click(function(){
-      $("#airtable_actress").show();
+      $("#airtable_actress").toggle();
   });
-});
-$(document).ready(function(){
-  $("button#hide_airtable").click(function(){
-      $("#airtable_actress").hide();
-  });
-});
 
 
-$(document).ready(function(){
-
-  $("button#get_data").click(function() {
-      $(".table-responsive").show();
+  $("button#show_dolls_table").click(function() {
+      $("#dolls_table").toggle();
       var items = [];
       var i = 0;
       var airtable_read_endpoint = "https://api.airtable.com/v0/appfU4wJMpJkHidFR/Princess%20Doll?api_key=keywZFkvBIh6rNMwS";
@@ -84,9 +62,55 @@ $(document).ready(function(){
       }); // end .getJSON
    }); // end button
 
+
+  $("button#show_dolls_chart").click(function() {
+    $("#dolls_table2").toggle();
+
+    var items = [];
+    var i = 0;
+    var airtable_read_endpoint = "https://api.airtable.com/v0/appfU4wJMpJkHidFR/Doll%20Category?api_key=keywZFkvBIh6rNMwS";
+    var dataSet = [];
+    $.getJSON(airtable_read_endpoint, function(result) {
+          $.each(result.records, function(key,value) {
+              items = [];
+                  items.push(value.fields.category);
+                  items.push(value.fields.rollup);
+                  dataSet.push(items);
+                  console.log(items);
+            }); // end .each
+            console.log(dataSet);
+
+        $('#table2').DataTable( {
+            data: dataSet,
+            retrieve: true,
+            columns: [
+                { title: "Category of Princess Doll",
+                  defaultContent:""},
+                { title: "Total",
+                    defaultContent:"" },
+            ]
+        } );
+
+        var chart = c3.generate({
+              data: {
+                  columns: dataSet,
+                  type : 'bar'
+              },
+              axis: {
+                x: {label: 'Category'},
+                y: {label: 'Total'}
+              },
+              bar: {
+                  title: "# of Items by Doll Category:",
+              }
+          });
+    }); // end .getJSON
+  }); // end button
+
+  $("button#hide_dolls_chart").click(function() {
+    $("#dolls_table2").hide();
+    $("#chart").hide();
+  }); // hide dolls chart
+
 }); // document ready
 
-
-$(document).ready(function() {
-    $('#example').DataTable();
-} );

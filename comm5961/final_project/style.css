@@ -126,6 +126,7 @@
   word-spacing: 1em;
   font-family: 'Philosopher';
 }
+.footer_current{color:rgba(87, 100, 105, 0.5);font-weight: bold}
 .footer_navlink:hover{color:rgb(206, 159, 178)}
 .fa-instagram{color:rgba(87, 100, 105, 0.9); margin:0 0.25em 0 0.25em} .fa-instagram:hover{color:rgb(206, 159, 178)}
 .fa-twitter{color:rgba(87, 100, 105, 0.9); margin:0 0.25em 0 0.25em} .fa-twitter:hover{color:rgb(206, 159, 178)}
@@ -216,14 +217,14 @@
   background-image: linear-gradient(rgba(245, 196, 219, 0.329), rgba(185, 240, 253, 0.6)),  url('https://images.unsplash.com/photo-1508020268086-b96cf4f4bb2e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1650&q=80');
 }
 #map{
-  height: 38em; 
+  height: 40em; 
   width: 100%;
   bottom:0;
   left:0;
   right:0;
   border:3px dashed rgba(87, 100, 105, 0.5);
 }
-.location_name{font-size: 1.4em;}
+.location_name{font-size: 1.2em;}
 .travelguides_container{
   background-image: linear-gradient(rgba(255, 255, 255, 0.589), rgba(255, 255, 255, 0.767)), url(https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1574490508830&di=ae04769b93faaffe357a0e39c58a73f6&imgtype=jpg&src=http%3A%2F%2Fimg3.imgtn.bdimg.com%2Fit%2Fu%3D476851863%2C1813084086%26fm%3D214%26gp%3D0.jpg); 
   background-position: right bottom;  
@@ -233,8 +234,16 @@
 }
 .mb-0{
   font-family: 'Cinzel';
-  font-size: 1.6em;
   color: rgb(47, 66, 63); text-shadow: 0 0 0.1em rgba(180, 180, 180, 0.8);
+  line-height: 1.8em;
+}
+.mb_second{
+  font-family: 'Josefin Sans';
+  color: rgb(62, 77, 74); 
+  font-size: 1.3em;
+  line-height: 1.8em;
+  letter-spacing: 0.05em;
+  margin-right: 1.5em;
 }
 .well{
   height: 40em;
@@ -254,7 +263,7 @@
 }
 #dolls_slide{
   margin-top:0;
-  background-image: linear-gradient(rgba(255, 182, 216, 0.7),rgba(255, 182, 216, 0.4), rgba(220, 255, 255, 0.6)), url(https://images.pexels.com/photos/2088203/pexels-photo-2088203.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500); 
+  background-image: linear-gradient(rgba(255, 182, 216, 0.3), rgba(220, 255, 255, 0.2)), url(https://images.pexels.com/photos/2088203/pexels-photo-2088203.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500); 
   background-position: right bottom;  
   background-size: cover; 
   background-repeat: repeat; 
@@ -262,94 +271,110 @@
 }
 #cosmetics_slide{
   margin-top:0;
-  background-image: linear-gradient(rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2)), url(https://images.pexels.com/photos/2088203/pexels-photo-2088203.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500); 
+  background-image: linear-gradient(rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.3)), url(https://images.pexels.com/photos/2088203/pexels-photo-2088203.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500); 
   background-position: right bottom;  
   background-size: cover; 
   background-repeat: repeat; 
   background-attachment: fixed;
 }
 
-
 /* 按钮 */
 .btn{font-size: 1.1em; border-radius: 0; padding:0.7em 1em 0.7em 1em;}
 .btn:hover {box-shadow: 0 0.5em 0.5em 0 rgba(255, 255, 255, 0.24), 0 1em 2em 0 rgba(255, 255, 255, 0.19);}
+.btn_toggle {margin: 2em 5em 1em 5em;}
+.btn_text{
+  font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  color:#555;
+  margin-right: 1em;
+  padding: 0.5em;
+}
+#overtext{
+  color:rgb(62, 67, 70);
+  margin-top:1em;
+  font-size:1.8em;
+}
+.airtable_embed {margin-top:2em; margin-bottom:4em;}
+.show_btn{
+  background-color: rgb(206, 159, 178);
+  color:#fff;
+  box-shadow: 0 0.3em 0.3em 0 rgba(189, 187, 187, 0.24), 0 1em 1em 0 rgba(180, 179, 179, 0.19);
+  border-color:#fff;
+  border-width: 0.1em;
+  border-style: solid;
+  outline:none;
+  border-radius: 1.5em;
+  font-family: 'Josefin Sans';
+  font-weight: bold;
+  font-size: 1.1em;
+  padding-top:0.8em;
+}
+.show_btn:hover{
+  background-color: rgba(87, 100, 105, 0.4);
+  color:#fff;
+  box-shadow: 0 0.5em 0.5em 0 rgba(136, 136, 136, 0.6), 0 1em 2em 0 rgba(129, 129, 129, 0.7);
+  outline:none;
+}
+.show_btn:active{
+  outline:none;
+}
+.show_btn:focus{
+  background-color: rgba(87, 100, 105, 0.9);
+  color:white; 
+  box-shadow: 0 0.3em 0.3em 0 rgba(107, 106, 106, 0.24), 0 1em 1em 0 rgba(119, 118, 118, 0.19);
+  outline:none;
+}
 #show_airtable{
   background-color: rgba(255, 255, 255, 0.959);
-  color:black;
+  color:rgb(62, 67, 70);
+  box-shadow: 0 0.3em 0.3em 0 rgba(189, 187, 187, 0.5), 0 1em 1em 0 rgba(180, 179, 179, 0.4);
   border:0;
+  margin:0
 }
-#hide_airtable{
-  background-color: rgba(0, 0, 0, 0);
-  color:white; 
-  border:1px solid white;
+#show_airtable:hover{
+  background-color: rgba(87, 100, 105, 0.4);
+  color:#fff;
+  box-shadow: 0 0.5em 0.5em 0 rgba(136, 136, 136, 0.6), 0 1em 2em 0 rgba(129, 129, 129, 0.7);
+  outline:none;
 }
-#show_animated{
-  background-color: rgb(87, 100, 105);
-  color:white; 
-  box-shadow: 0 0.3em 0.3em 0 rgba(107, 106, 106, 0.24), 0 1em 1em 0 rgba(119, 118, 118, 0.19);
-  border:1px solid rgb(87, 100, 105);
-}
-#hide_animated{
-  background-color: rgba(153, 153, 153, 0.377);
-  color:black;
-  box-shadow: 0 0.3em 0.3em 0 rgba(189, 187, 187, 0.24), 0 1em 1em 0 rgba(180, 179, 179, 0.19);
-  border:0;
-}
-#show_animated:hover {box-shadow: 0 0.5em 0.5em 0 rgba(136, 136, 136, 0.6), 0 1em 2em 0 rgba(129, 129, 129, 0.7);}
-#hide_animated:hover {box-shadow: 0 0.5em 0.5em 0 rgba(136, 136, 136, 0.6), 0 1em 2em 0 rgba(129, 129, 129, 0.7);}
-#show_remake{
-  background-color: rgb(87, 100, 105);
+#show_airtable:focus{
+  background-color: rgba(87, 100, 105, 0.9);
   color:white; 
   box-shadow: 0 0.3em 0.3em 0 rgba(107, 106, 106, 0.24), 0 1em 1em 0 rgba(119, 118, 118, 0.19);
-  border:1px solid rgb(87, 100, 105);
+  outline:none;
 }
-#hide_remake{
-  background-color: rgba(153, 153, 153, 0.377);
-  color:black;
-  box-shadow: 0 0.3em 0.3em 0 rgba(189, 187, 187, 0.24), 0 1em 1em 0 rgba(180, 179, 179, 0.19);
-  border:0;
-}
-#show_remake:hover {box-shadow: 0 0.5em 0.5em 0 rgba(136, 136, 136, 0.6), 0 1em 2em 0 rgba(129, 129, 129, 0.7);}
-#hide_remake:hover {box-shadow: 0 0.5em 0.5em 0 rgba(136, 136, 136, 0.6), 0 1em 2em 0 rgba(129, 129, 129, 0.7);}
+
 #show_districts{
+  font-family: 'Josefin Sans';
+  font-weight: bold;
+  font-size: 1.2em;
   background-color: rgb(87, 100, 105);
   color:white; 
-  font-size: 14px;
-  padding-right: 20px;
+  padding: 0.6em 1.1em 0.5em 0.4em;
   box-shadow: 0 0.5em 0.5em 0 rgba(107, 106, 106, 0.253), 0 1em 2em 0 rgba(119, 118, 118, 0.253);
 }
-.fa-map-marker{font-size: 20px;}
-.fa-location-arrow{font-size: 16px; color:rgb(87, 100, 105); margin-left:16px;}
 #show_districts:hover {box-shadow: 0 1em 1em 0 rgba(107, 106, 106, 0.24), 0 1em 2em 0 rgba(119, 118, 118, 0.19);}
+.fa-map-marker{font-size: 1.4em;}
+.fa-location-arrow{font-size: 1em; color:rgb(87, 100, 105); margin-left:0.5em;}
+
 #show_tripadvisor{
   background-color: rgb(57, 122, 110);
   color:white; 
   font-size: 12px;
-  box-shadow: 0 0.5em 0.5em 0 rgba(107, 106, 106, 0.253), 0 1em 2em 0 rgba(119, 118, 118, 0.253);
+  box-shadow: 0 0.5em 0.5em 0 rgba(107, 106, 106, 0.2), 0 1em 2em 0 rgba(119, 118, 118, 0.2);
 }
-#show_tripadvisor:hover {box-shadow: 0 1em 1em 0 rgba(107, 106, 106, 0.24), 0 1em 2em 0 rgba(119, 118, 118, 0.19);}
+#show_tripadvisor:hover {box-shadow: 0 1em 1em 0 rgba(107, 106, 106, 0.3), 0 1em 2em 0 rgba(119, 118, 118, 0.2);}
+
+.hide_btn{
+  background-color: rgb(87, 100, 105);
+  color:white; 
+  box-shadow: 0 0.3em 0.3em 0 rgba(107, 106, 106, 0.24), 0 1em 1em 0 rgba(119, 118, 118, 0.19);
+  border:1px solid rgb(87, 100, 105);
+}
+.hide_btn:hover{box-shadow: 0 0.5em 0.5em 0 rgba(136, 136, 136, 0.6), 0 1em 2em 0 rgba(129, 129, 129, 0.7)}
+
+
 /* 按钮 End */
-/* 分割线 */
-.hr_style1{
-  height: 40px; 
-  border-style: dashed; 
-  border-color: rgba(153, 153, 153, 0.8); 
-  border-width: 1px 0 0 0; 
-  border-radius: 30px; 
-  margin-top: 6em;
-  margin-bottom: 4em;
-} 
-.hr_style1:before { 
-  display: block; 
-  content: ""; 
-  height: 40px; 
-  margin-top: -41px; 
-  border-style: dashed; 
-  border-color: rgba(153, 153, 153, 0.8); 
-  border-width: 0 0 1px 0; 
-  border-radius: 30px; 
-}
-/* 分割线 End */
+
 /* 空白行 */
 .blanklinesm {height:0.5em;}
 .blankline {height:1em;}
@@ -357,3 +382,12 @@
 .blanklinemlg {height:4em;}
 .blanklinelg {height:6em;}
 /* 空白行 End */
+
+/* data */
+.table-responsive{
+  margin:2em 0 3em 0;
+  font-family:'Montserrat';
+}
+.dolls_table{margin:2em 5em 2em 5em;}
+#chart{margin-top:2em; margin-bottom:3em}
+/* data End */
