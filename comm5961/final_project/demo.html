@@ -2,108 +2,138 @@
 
 <html>
 <head>
-    <meta name="viewport" content="width=device-width" />
-    <title>YoutubeGallery</title>
-    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.5/js/bootstrap.min.js"></script>
-    <style>
-        img{
-            cursor:pointer;
-        }
-    </style>
+        <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+        <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+        <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+
+        <style>
+            .video-list-thumbs{}
+.video-list-thumbs > li{
+    margin-bottom:12px;
+}
+.video-list-thumbs > li:last-child{}
+.video-list-thumbs > li > a{
+	display:block;
+	position:relative;
+	background-color: #111;
+	color: #fff;
+	padding: 8px;
+	border-radius:3px
+    transition:all 500ms ease-in-out;
+    border-radius:4px;
+}
+.video-list-thumbs > li > a:hover{
+	box-shadow:0 2px 5px rgba(0,0,0,.3);
+	text-decoration:none
+}
+.video-list-thumbs h2{
+	bottom: 0;
+	font-size: 14px;
+	height: 33px;
+	margin: 8px 0 0;
+}
+.video-list-thumbs .glyphicon-play-circle{
+    font-size: 60px;
+    opacity: 0.6;
+    position: absolute;
+    right: 39%;
+    top: 31%;
+    text-shadow: 0 1px 3px rgba(0,0,0,.5);
+    transition:all 500ms ease-in-out;
+}
+.video-list-thumbs > li > a:hover .glyphicon-play-circle{
+	color:#fff;
+	opacity:1;
+	text-shadow:0 1px 3px rgba(0,0,0,.8);
+}
+.video-list-thumbs .duration{
+	background-color: rgba(0, 0, 0, 0.4);
+	border-radius: 2px;
+	color: #fff;
+	font-size: 11px;
+	font-weight: bold;
+	left: 12px;
+	line-height: 13px;
+	padding: 2px 3px 1px;
+	position: absolute;
+	top: 12px;
+    transition:all 500ms ease;
+}
+.video-list-thumbs > li > a:hover .duration{
+	background-color:#000;
+}
+@media (min-width:320px) and (max-width: 480px) { 
+	.video-list-thumbs .glyphicon-play-circle{
+    font-size: 35px;
+    right: 36%;
+    top: 27%;
+	}
+	.video-list-thumbs h2{
+		bottom: 0;
+		font-size: 12px;
+		height: 22px;
+		margin: 8px 0 0;
+	}
+}
+        </style>
 </head>
 <body>
-    <div class="content">
-        <div class="row">
-            <div class="col-md-12 col-lg-12 col-sm-12 col-xs-12">
-                <h3>&nbsp;&nbsp;Youtube Video Gallery Using Bootstrap Modal Popup</h3>
-                <div class="col-sm-2">
-                    <div class="panel panel-default">
-                        <div class="panel-heading">
-                            <a class="linkSource">
-                                <img src="//img.youtube.com/vi/A5NA89oTD8A/0.jpg" alt="https://www.youtube.com/vi/A5NA89oTD8A" class="img-responsive">
-                            </a>
-                        </div>
-                        <div class="panel-footer text-center">Windows Authentication</div>
-                    </div>
-                </div>
-                <div class="col-sm-2">
-                    <div class="panel panel-default">
-                        <div class="panel-heading">
-                            <a class="linkSource">
-                                <img src="//img.youtube.com/vi/h1rLsvKXNfk/0.jpg" alt="https://www.youtube.com/vi/h1rLsvKXNfk" class="img-responsive">
-                            </a>
-                        </div>
-                        <div class="panel-footer text-center">Datatables</div>
-                    </div>
-                </div>
-                <div class="col-sm-2">
-                    <div class="panel panel-default">
-                        <div class="panel-heading">
-                            <a class="linkSource">
-                                <img src="//img.youtube.com/vi/1oye7q74v5U/0.jpg" alt="https://www.youtube.com/vi/1oye7q74v5U" class="img-responsive">
-                            </a>
-                        </div>
-                        <div class="panel-footer text-center">System Environment</div>
-                    </div>
-                </div>
-            </div>
+    
+<div class="container">
+
+        <p>
+            <h5>Features:</h5>
+            <ul>
+                <li>Responsive design with hover effect</li>
+                <li>Compatible with bootstrap 3.0.0 and Up</li>
+                <li>No Javascript</li>
+            </ul>
+            <hr>
+        </p>
+        
+        <ul class="list-unstyled video-list-thumbs row">
+            <li class="col-lg-3 col-sm-4 col-xs-6">
+                <a href="https://youtu.be/tj0GYm72SlI" title="Claudio Bravo, antes su debut con el Barça en la Liga" target="_blank">
+                    <img src="https://lumiere-a.akamaihd.net/v1/images/g_frozen2_06_18371_07a4447a.jpeg?region=0%2C0%2C1300%2C730" alt="Barca" class="img-responsive" height="130px" />
+                    <h2>Claudio Bravo, antes su debut con el Barça en la Liga</h2>
+                    <span class="glyphicon glyphicon-play-circle"></span>
+                    <span class="duration">03:15</span>
+                </a>
+            </li>
+            <li class="col-lg-3 col-sm-4 col-xs-6">
+                <a href="#" title="Claudio Bravo, antes su debut con el Barça en la Liga">
+                    <img src="http://i.ytimg.com/vi/ZKOtE9DOwGE/mqdefault.jpg" alt="Barca" class="img-responsive" height="130px" />
+                    <h2>Claudio Bravo, antes su debut con el Barça en la Liga</h2>
+                    <span class="glyphicon glyphicon-play-circle"></span>
+                    <span class="duration">03:15</span>
+                </a>
+            </li>
+            <li class="col-lg-3 col-sm-4 col-xs-6">
+                <a href="#" title="Claudio Bravo, antes su debut con el Barça en la Liga">
+                    <img src="http://i.ytimg.com/vi/ZKOtE9DOwGE/mqdefault.jpg" alt="Barca" class="img-responsive" height="130px" />
+                    <h2>Claudio Bravo, antes su debut con el Barça en la Liga</h2>
+                    <span class="glyphicon glyphicon-play-circle"></span>
+                    <span class="duration">03:15</span>
+                </a>
+            </li>
+            <li class="col-lg-3 col-md-4 col-sm-4 col-xs-6">
+                <a href="#" title="Claudio Bravo, antes su debut con el Barça en la Liga">
+                    <img src="http://i.ytimg.com/vi/ZKOtE9DOwGE/mqdefault.jpg" alt="Barca" class="img-responsive" height="130px" />
+                    <h2>Claudio Bravo, antes su debut con el Barça en la Liga</h2>
+                    <span class="glyphicon glyphicon-play-circle"></span>
+                    <span class="duration">03:15</span>
+                </a>
+            </li>
+            <li class="col-lg-3 col-md-4 col-sm-4 col-xs-6">
+                <a href="#" title="Claudio Bravo, antes su debut con el Barça en la Liga">
+                    <img src="http://i.ytimg.com/vi/ZKOtE9DOwGE/mqdefault.jpg" alt="Barca" class="img-responsive" height="130px" />
+                    <h2>Claudio Bravo, antes su debut con el Barça en la Liga</h2>
+                    <span class="glyphicon glyphicon-play-circle"></span>
+                    <span class="duration">03:15</span>
+                </a>
+            </li>
+        </ul>
+        
         </div>
-    </div>
-    <div id="myModal" class="modal fade" role="dialog">
-        <div class="modal-dialog">
-
-            <!-- Modal content-->
-            <div class="modal-content">
-                <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal">&times;</button>
-                    <h4 class="modal-title">Modal Header</h4>
-                </div>
-                <div class="modal-body">
-                    <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
-
-                        <!-- Wrapper for slides -->
-                        <div class="carousel-inner">
-                            <div class="item active">
-                                <div class="embed-responsive embed-responsive-4by3">
-                                    <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/A5NA89oTD8A"></iframe>
-                                </div>
-                            </div>
-                            <div class="item">
-                                <div class="embed-responsive embed-responsive-4by3">
-                                    <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/h1rLsvKXNfk"></iframe>
-                                </div>
-                            </div>
-                            <div class="item">
-                                <div class="embed-responsive embed-responsive-4by3">
-                                    <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/1oye7q74v5U"></iframe>
-                                </div>
-
-                            </div>
-                        </div>
-                        <!-- Controls -->
-                        <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
-                            <span class="glyphicon glyphicon-chevron-left"></span>
-                        </a>
-                        <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
-                            <span class="glyphicon glyphicon-chevron-right"></span>
-                        </a>
-                    </div>
-                </div>
-            </div>
-
-        </div>
-    </div>
-    </div>
-    <script>
-        $(document).ready(function () {
-
-            $(".linkSource").click(function () {
-                $("#myCarousel").carousel();
-                $("#myModal").modal("show");
-            });
-        });
-    </script>
 </body>
 </html>
