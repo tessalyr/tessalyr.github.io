@@ -2,18 +2,15 @@ $(document).ready(function(){
   $("button#show_animated").click(function(){
       $("#airtable_animated").toggle();
   });
-
   $("button#show_remake").click(function(){
       $("#actresses").toggle();
   });
-
   $("button#show_airtable").click(function(){
       $("#airtable_actress").toggle();
   });
 
-
   $("button#show_dolls_table").click(function() {
-      $("#dolls_table").toggle();
+      $("#dolls_table").show();
       var items = [];
       var i = 0;
       var airtable_read_endpoint = "https://api.airtable.com/v0/appfU4wJMpJkHidFR/Princess%20Doll?api_key=keywZFkvBIh6rNMwS";
@@ -61,11 +58,13 @@ $(document).ready(function(){
            } );
       }); // end .getJSON
    }); // end button
-
+   
+  $("button#hide_dolls_table").click(function() {
+    $("#dolls_table").hide();
+  });
 
   $("button#show_dolls_chart").click(function() {
-    $("#dolls_table2").toggle();
-
+    $("#dolls_table2").show();
     var items = [];
     var i = 0;
     var airtable_read_endpoint = "https://api.airtable.com/v0/appfU4wJMpJkHidFR/Doll%20Category?api_key=keywZFkvBIh6rNMwS";
