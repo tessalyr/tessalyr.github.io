@@ -58,7 +58,7 @@ $(document).ready(function(){
            } );
       }); // end .getJSON
    }); // end button
-   
+
   $("button#hide_dolls_table").click(function() {
     $("#dolls_table").hide();
   });
@@ -101,7 +101,8 @@ $(document).ready(function(){
               },
               bar: {
                   title: "# of Items by Doll Category:",
-              }
+              },
+
           });
     }); // end .getJSON
   }); // end button
