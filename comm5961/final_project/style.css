@@ -110,10 +110,20 @@
   color: #333; text-shadow: 0 0 0.1em rgb(180, 180, 180);
   background: rgba(228, 151, 181, 0.15);
 }
-.shadow:hover {
+.shadow:hover{
   color: #111; text-shadow: 0.1em 0.1em 0.3em rgba(125, 156, 182, 0.562);
   background: #fff;
 }
+.imgback{
+  background: rgb(211, 140, 170);
+}
+.img-responsive{
+  opacity:0.5; filter: alpha(opacity=50);
+}
+.img-responsive:hover{
+  opacity:1; filter:alpha(Opacity=100);
+}
+
 /* footer */
 .footer-brand{
   font-family: 'WaltographRegular';
@@ -295,7 +305,7 @@
 }
 .airtable_embed {margin-top:1em; margin-bottom:2.5em;}
 .show_btn{
-  background-color: rgb(206, 159, 178);
+  background-color: rgb(202, 147, 169);
   color:#fff;
   box-shadow: 0em 0.2em 0.2em 0em rgba(189, 187, 187, 0.9), 0 0.3em 0.3em 0 rgba(189, 187, 187, 0.24), 0 1em 1em 0 rgba(180, 179, 179, 0.19);
   outline:none;
@@ -320,7 +330,7 @@
   outline:none;
 }
 .hide_btn{
-  background-color: rgb(137, 164, 177);
+  background-color: rgb(128, 159, 173);
   color:#fff;
   box-shadow: 0em 0.2em 0.2em 0em rgba(189, 187, 187, 0.9), 0 0.3em 0.3em 0 rgba(189, 187, 187, 0.24), 0 1em 1em 0 rgba(180, 179, 179, 0.19);
   outline:none;
@@ -378,12 +388,15 @@
 .fa-location-arrow{font-size: 1em; color:rgb(87, 100, 105); margin-left:0.5em;}
 
 #show_tripadvisor{
-  background-color: rgb(57, 122, 110);
+  background-color: rgb(179, 127, 147);
   color:white; 
   font-size: 12px;
   box-shadow: 0 0.5em 0.5em 0 rgba(107, 106, 106, 0.2), 0 1em 2em 0 rgba(119, 118, 118, 0.2);
 }
-#show_tripadvisor:hover {box-shadow: 0 1em 1em 0 rgba(107, 106, 106, 0.3), 0 1em 2em 0 rgba(119, 118, 118, 0.2);}
+#show_tripadvisor:hover{
+  background-color: rgb(175, 113, 139);
+  box-shadow: 0 1em 1em 0 rgba(107, 106, 106, 0.3), 0 1em 2em 0 rgba(119, 118, 118, 0.2);
+}
 
 
 /* 按钮 End */
