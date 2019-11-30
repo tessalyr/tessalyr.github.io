@@ -81,6 +81,7 @@
   background-image:linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0), rgba(0, 0, 0, 0), rgba(0, 0, 0, 0),rgba(0, 0, 0, 0.507),rgba(0, 0, 0, 0.801), rgb(0, 0, 0));
 }
 .imgBox img {mix-blend-mode:multiply;}
+.imgBox1{height:51.5em}
 .newsTitle{
   margin-bottom:0.5em;
   font-size: 3em;
