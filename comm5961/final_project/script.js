@@ -112,5 +112,7 @@ $(document).ready(function(){
     $("#chart").hide();
   }); // hide dolls chart
 
+
+
 }); // document ready
 

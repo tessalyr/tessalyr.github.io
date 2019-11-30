@@ -115,7 +115,7 @@
   background: #fff;
 }
 .imgback{
-  background: rgb(211, 140, 170);
+  background: rgb(221, 175, 194);
 }
 .img-responsive{
   opacity:0.5; filter: alpha(opacity=50);
@@ -313,6 +313,7 @@
   font-weight: bold;
   font-size: 1.5em;
   padding:0.8em 1.5em 0.7em 1.4em;
+  border-radius: 0.2em;
 }
 .show_btn:hover{
   background-color: rgba(87, 100, 105, 0.4);
@@ -338,6 +339,7 @@
   font-weight: bold;
   font-size: 1.5em;
   padding:0.8em 1.5em 0.7em 1.4em;
+  border-radius: 0.2em;
 }
 .hide_btn:hover{
   background-color: rgba(87, 100, 105, 0.4);
@@ -388,7 +390,7 @@
 .fa-location-arrow{font-size: 1em; color:rgb(87, 100, 105); margin-left:0.5em;}
 
 #show_tripadvisor{
-  background-color: rgb(179, 127, 147);
+  background-color: rgb(197, 138, 161);
   color:white; 
   font-size: 12px;
   box-shadow: 0 0.5em 0.5em 0 rgba(107, 106, 106, 0.2), 0 1em 2em 0 rgba(119, 118, 118, 0.2);
