@@ -1,4 +1,54 @@
 $(document).ready(function(){
+  $("button#show_princess").click(function() {
+    $("#princess_table").toggle();
+    var items = [];
+    var i = 0;
+    var airtable_read_endpoint = "https://api.airtable.com/v0/appfU4wJMpJkHidFR/Homepage?api_key=keywZFkvBIh6rNMwS";
+    var dataSet = [];
+    $.getJSON(airtable_read_endpoint, function(result) {
+           $.each(result.records, function(key,value) {
+               items = [];
+                   items.push(value.fields.name);
+                   items.push(value.fields.chinese_name);
+                   items.push(value.fields.princess_status);
+                   items.push(value.fields.species);
+                   items.push(value.fields.royal_status);
+                   items.push(value.fields.nationality);
+                   items.push(value.fields.spouse);
+                   items.push(value.fields.animation);
+                   items.push(value.fields.original);
+                   dataSet.push(items);
+                   console.log(items);
+            }); // end .each
+            console.log(dataSet);
+
+         $('#table0').DataTable( {
+             data: dataSet,
+             retrieve: true,
+             columns: [
+                 { title: "Name",
+                   defaultContent:""},
+                 { title: "Chinese Name",
+                     defaultContent:"" },
+                 { title: "Princess Status",
+                   defaultContent:""},
+                 { title: "Species",
+                     defaultContent:""},
+                 { title: "Royal Status",
+                   defaultContent:""},
+                 { title: "Nationality",
+                   defaultContent:""},
+                 { title: "Spouse",
+                   defaultContent:""},
+                 { title: "Animation",
+                   defaultContent:""},
+                 { title: "Original",
+                   defaultContent:"" },
+             ]
+         } );
+    }); // end .getJSON
+ }); // end button
+
   $("button#show_animated").click(function(){
       $("#airtable_animated").toggle();
   });

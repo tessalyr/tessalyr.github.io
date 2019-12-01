@@ -231,7 +231,7 @@
   background-image: linear-gradient(rgba(245, 196, 219, 0.329), rgba(185, 240, 253, 0.6)),  url('https://images.unsplash.com/photo-1508020268086-b96cf4f4bb2e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1650&q=80');
 }
 #map{
-  height: 40em; 
+  height: 42em; 
   width: 100%;
   bottom:0;
   left:0;
@@ -260,7 +260,7 @@
   margin-right: 1.5em;
 }
 .well{
-  height: 35em;
+  height: 50em;
   margin-top: 1em;
 }
 .slide_title{
@@ -309,6 +309,7 @@
 .airtable_embed {margin-top:1em; margin-bottom:2.5em;}
 .open_btn{
   font-size: 2em;
+  margin-top: 0.3em;
   padding:0.8em 1.5em 0.7em 1.4em;
 }
 .show_btn{
@@ -389,7 +390,7 @@
 #show_districts{
   font-family: 'Josefin Sans';
   font-weight: bold;
-  font-size: 1.2em;
+  font-size: 1.4em;
   background-color: rgb(87, 100, 105);
   color:white; 
   padding: 0.6em 1.1em 0.5em 0.4em;

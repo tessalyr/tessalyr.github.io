@@ -18,9 +18,14 @@
         <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
         <script type="text/javascript" src="http://netdna.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
 
+
         <link rel="stylesheet" href="//cdn.bootcss.com/bootstrap/3.3.5/css/bootstrap.min.css">
         <script src="//cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>
         <script src="//cdn.bootcss.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+        <!--DataTables-->
+        <link rel="stylesheet" href="https://cdn.datatables.net/1.10.20/css/jquery.dataTables.min.css">
+        <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+        <script src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js"></script>
 
         <!--My Settings-->
         <link rel="stylesheet" href="custom.css">
@@ -981,14 +986,22 @@
             <div class="blanklinelg"></div>
             <h4 class="btn_text text-center">To know more details about <b><i>Disney Princesses</i></b>, click on the button below.</h4><div class="blankline"></div>
             <div class="d-flex justify-content-center">
-                <button type="button" class="btn btn-light show_btn open_btn" id="show_animated"><b> OPEN </b></button>  
+                <button type="button" class="btn btn-light show_btn open_btn" id="show_princess"><b> OPEN </b></button>  
             </div>
         </div>
-            <div class="col-sm-12">
-                <div class="airtable_embed d-flex justify-content-center">
-                    <iframe class="airtable-embed" id="airtable_animated" src="https://airtable.com/embed/shrjeqcwbKvTa0wED?backgroundColor=cyanLight&viewControls=on"
-                    frameborder="0" onmousewheel="" width="100%" height="590" style="background: transparent; border: 1px solid #ccc; display:none;"></iframe> 
+        <div class="col-sm-12">
+            <!--DataTable: Princess-->
+            <div class="princess_table">
+                <div class="col-xs-12">
+                <div class="table-responsive" id="princess_table">
+                    <table id="table0" width="100%" class="table table-bordered table-striped hover compact"></table>
                 </div>
+                </div>
+            </div>
+            <!--DataTable: Princess End-->
+            <div class="airtable_embed d-flex justify-content-center">
+                <iframe class="airtable-embed" id="airtable_princess" src="https://airtable.com/embed/shrjeqcwbKvTa0wED?backgroundColor=cyanLight&viewControls=on"
+                frameborder="0" onmousewheel="" width="100%" height="590" style="background: transparent; border: 1px solid #ccc; display:none;"></iframe> 
             </div>
         </div>
         <!-- Princess Information End -->
