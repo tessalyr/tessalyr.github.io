@@ -16,7 +16,6 @@ $(document).ready(function(){
                    items.push(value.fields.nationality);
                    items.push(value.fields.spouse);
                    items.push(value.fields.animation);
-                   items.push(value.fields.original);
                    dataSet.push(items);
                    console.log(items);
             }); // end .each
@@ -42,9 +41,7 @@ $(document).ready(function(){
                    defaultContent:""},
                  { title: "Animation",
                    defaultContent:""},
-                 { title: "Original",
-                   defaultContent:"" },
-             ]
+             ],
          } );
     }); // end .getJSON
  }); // end button
