@@ -16,6 +16,17 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
         <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+        <!--DataTables-->
+        <link rel="stylesheet" href="https://cdn.datatables.net/1.10.20/css/jquery.dataTables.min.css">
+        <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+        <script src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js"></script>
+        <!--C3,D3-->
+        <link rel="stylesheet" href="c3-0.7.10/c3.css">
+        <script src="c3-0.7.10/c3.min.js"></script>
+        <script src="c3-0.7.10/d3.v5.min.js" charset="utf-8"></script>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.4.11/d3.js"></script>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/c3/0.1.29/c3.js"></script>
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/c3/0.1.29/c3.css" rel="stylesheet" type="text/css">
 
         <!--My Settings-->
         <link rel="stylesheet" href="custom.css">
@@ -94,6 +105,12 @@
             <div class="card-footer text-muted text_footer">
                 <ul class="nav justify-content-center">
                     <li class="nav-item">
+                        <a class="nav-link-title active" href="#section0">Statistics</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link-title"> | </a>
+                    </li>
+                    <li class="nav-item">
                         <a class="nav-link-title active" href="#section1">Animation</a>
                     </li>
                     <li class="nav-item">
@@ -107,13 +124,97 @@
         </div>
         <!--text End-->
 
+        <!--Statistics-->
+        <div class="section">
+            <div class="container col-sm-12"  id="section0">
+                <div class="row col-sm-12 d-flex justify-content-center">
+                    <div class="col-sm-12">
+                        <h1 class="text-center" style="font-family: 'Cinzel'">
+                            <div class="blanklinemd"></div><b>Statistics</b><div class="blankline"></div>
+                        </h1>
+                    </div>
+                    <div class="col-sm-10">
+                        <h4 class="btn_text text-center">Below are the top 100 Walt Disney movies based on worldwide box office.
+                            <br> Here the 100 movies are grouped by: <b><i>Whether are Princess Movies</i></b> , <b><i>Released Year</i></b> and <b><i>Box Office</i></b> .
+                            <br> Follow the 4 steps to know more details</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--Statistics End-->
+
+        <!--Data Visualization-->
+        <!--Data Buttons-->
+        <div class="button_groups">
+            <div class="col-xs-12 d-flex justify-content-center">
+                <div class="btn-group ml-3 mr-3" role="group" aria-label="1st group">
+                    <button type="button" class="btn btn-light show_btn movies_data" id="show_a">Step 1</button>
+                </div>
+                <div class="btn-group ml-3 mr-3" role="group" aria-label="2nd group">
+                    <button type="button" class="btn btn-light show_btn movies_data" id="show_b">Step 2</button>
+                </div>
+                <div class="btn-group ml-3 mr-3" role="group" aria-label="3st group">
+                    <button type="button" class="btn btn-light show_btn movies_data" id="show_c">Step 3</button>
+                </div>
+                <div class="btn-group ml-3 mr-3" role="group" aria-label="4st group">
+                    <button type="button" class="btn btn-light show_btn movies_data" id="hide_all">Step 4</button>
+                </div>
+            </div>
+        </div>
+        <!--Data Buttons End-->
+        <div class="col-xs-12 d-flex justify-content-center" id="text_box"></div>
+        <!--Chart: whether -->
+        <div class="tc_group col-xs-12" id="tc_group_a">
+            
+            <div class="col-xs-12 d-flex justify-content-center">  
+                    <div class="chart col-lg-8 col-md-10 col-sm-12" id="chart_whether">
+                        <div id="chart"></div>
+                    </div>
+                </div>
+            <div class="col-xs-12 d-flex justify-content-center">
+                <div class="table-responsive col-lg-6 col-md-8 col-sm-12" id="table_whether">
+                    <table id="table_a" width="100%" class="table table-bordered table-striped hover"></table>
+                </div>
+            </div>
+        </div>
+        <!--Chart: whether End-->
+        <!--Chart: released -->
+        <div class="tc_group col-xs-12" id="tc_group_b">
+            <div class="col-xs-12 d-flex justify-content-center">  
+                <div class="chart col-lg-10 col-sm-12" id="chart_released">
+                    <div id="chart"></div>
+                </div>
+            </div>
+            <div class="col-xs-12 d-flex justify-content-center">
+                <div class="table-responsive col-lg-6 col-md-8 col-sm-12" id="table_released">
+                    <table id="table_b" width="100%" class="table table-bordered table-striped hover compact"></table>
+                </div>
+            </div>
+        </div>
+        <!--Chart: released End-->
+        <!--Chart: boxoffice -->
+        <div class="tc_group col-xs-12" id="tc_group_c">
+            <div class="col-xs-12 d-flex justify-content-center">  
+                <div class="chart col-lg-8 col-md-10 col-sm-12" id="chart_boxoffice">
+                    <div id="chart"></div>
+                </div>
+            </div>
+            <div class="col-xs-12 d-flex justify-content-center">
+                <div class="table-responsive col-lg-6 col-md-8 col-sm-12" id="table_boxoffice">
+                    <table id="table_c" width="100%" class="table table-bordered table-striped hover"></table>
+                </div>
+            </div>
+        </div>
+        <!--Chart: boxoffice End-->
+        <!--Data Visualization End-->
+
         <!--Animation Videos-->
         <div class="section">
             <div class="container col-sm-12">
+                <hr><div class="blankline"></div>
                 <div class="row" id="section1">
                     <div class="col-sm-12">
                         <h1 class="text-center" style="font-family: 'Cinzel'">
-                            <div class="blanklinemd"></div>
                             <b>Animation</b>
                         </h1>
                     </div>
@@ -210,7 +311,7 @@
                         <h3 class="subtitle">More Details</h3>
                     </div><div class="blanklinemd"></div>
                     <ul class="list-unstyled video-list-thumbs row"></ul>
-                    <h4 class="btn_text">To know more about the <b><i>Evolution</i></b> and the <b><i>Culture</i></b> of the <b><i>Disney Princess Animation</i></b>, click on the button below:</h4>
+                    <h4 class="btn_text text-center">To know more about the <b><i>Evolution</i></b> and the <b><i>Culture</i></b> of the <b><i>Disney Princess Animation</i></b>, click on the button below:</h4>
                     <div class="d-flex justify-content-center">
                         <button type="button" class="btn btn-light show_btn open_btn" id="show_animated"><b> OPEN </b></button>  
                     </div>
@@ -297,7 +398,7 @@
                         <h3 class="subtitle">More Details</h3>
                     </div><div class="blanklinemd"></div>
                     <ul class="list-unstyled video-list-thumbs row"></ul>
-                    <h4 class="btn_text">To know more about the <b><i>Evolution</i></b> and the <b><i>Culture</i></b> of the <b><i>Disney Princess Live-action Remake</i></b>, click on the button below:</h4>
+                    <h4 class="btn_text text-center">To know more about the <b><i>Evolution</i></b> and the <b><i>Culture</i></b> of the <b><i>Disney Princess Live-action Remake</i></b>, click on the button below:</h4>
                     <div class="d-flex justify-content-center">
                         <button type="button" class="btn btn-light show_btn open_btn" id="show_remake"><b> OPEN </b></button> 
                     </div>

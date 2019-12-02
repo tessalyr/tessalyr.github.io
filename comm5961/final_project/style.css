@@ -300,6 +300,7 @@
   font-family: 'Josefin Sans';
   color:#555;
   margin-bottom: 1.5em;
+  line-height: 2.5em;
 }
 #overtext{
   color:rgb(62, 67, 70);
@@ -307,11 +308,6 @@
   font-size:1.8em;
 }
 .airtable_embed {margin-top:1em; margin-bottom:2.5em;}
-.open_btn{
-  font-size: 2em;
-  margin-top: 0.3em;
-  padding:0.8em 1.5em 0.7em 1.4em;
-}
 .show_btn{
   background-color: rgb(202, 147, 169);
   color:#fff;
@@ -320,11 +316,9 @@
   font-family: 'Josefin Sans';
   font-weight: bold;
   font-size: 1.5em;
-  padding:0.8em 1.5em 0.7em 1.4em;
-}
-.open_btn{
-  font-size: 1.8em;
-  padding:0.8em 1.8em 0.7em 1.7em;
+  width: 5em;
+  height: 3em;
+  margin: 0;
 }
 .show_btn:hover{
   background-color: rgba(87, 100, 105, 0.4);
@@ -349,8 +343,9 @@
   font-family: 'Josefin Sans';
   font-weight: bold;
   font-size: 1.5em;
-  padding:0.8em 1.5em 0.7em 1.4em;
-  border-radius: 0.2em;
+  width: 5em;
+  height: 3em;
+  margin: 0;
 }
 .hide_btn:hover{
   background-color: rgba(87, 100, 105, 0.4);
@@ -367,6 +362,19 @@
   box-shadow: 0 0.3em 0.3em 0 rgba(107, 106, 106, 0.24), 0 1em 1em 0 rgba(119, 118, 118, 0.19);
   outline:none;
 }
+.open_btn{
+  font-size: 1.8em;
+  width: 6em;
+  height: 3em;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+}
+.movies_data{
+  font-size: 2.2em;
+  width: 6em;
+  height: 4em;
+}
+
 #show_airtable{
   background-color: rgba(255, 255, 255, 0.959);
   color:rgb(62, 67, 70);
@@ -424,24 +432,15 @@
 
 /* data */
 .data_brief{
-  margin: 2.8em 1em 0 0;
+  margin: 0 1em 0 0;
   padding: 1em 1em 0em 1em;
   color:#333;
   box-shadow: 0 0.5em 0.5em 0 rgba(136, 136, 136, 0.3), 0 1em 2em 0 rgba(129, 129, 129, 0.2);
 }
-.btn-group{
-  margin: 4.5em 0 0 0;
-}
 .table-responsive{
-  margin:0;
   font-family:'Montserrat';
 }
-.dolls_table{
-  margin:0;
-}
-#chart{
-  margin:0;
-}
+
 /* data End */
 
 /* movies */
