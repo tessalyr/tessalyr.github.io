@@ -99,45 +99,7 @@
       </div>
   </div>
   <!--text End-->
-  <!--Data Buttons-->
-  <div class="button_groups">
-    <div class="col-xs-12 d-flex justify-content-center">
-        <div class="btn-group ml-5 mr-3" role="group" aria-label="First group">
-          <button type="button" class="btn btn-light show_btn" id="show_dolls_table">Show</button>
-          <button type="button" class="btn btn-light hide_btn" id="hide_dolls_table">Hide</button>
-        </div>
-        <p class="slide_content data_brief">Data Statistics for Princess Dolls</p>
 
-        <div class="btn-group ml-5 mr-3" role="group" aria-label="Second group">
-          <button type="button" class="btn btn-light show_btn" id="show_dolls_chart">Show</button>
-          <button type="button" class="btn btn-light hide_btn" id="hide_dolls_chart">Hide</button>
-        </div>
-        <p class="slide_content data_brief">Data Analysis for Princess Dolls</p>
-      </div>
-    </div>
-  </div>
-  <!--Data Buttons End-->
-  <!--Data Visualization-->
-  <div class="col-xs-12">
-    <!--DataTable: Dolls-->
-    <div class="dolls_table">
-      <div class="col-xs-12">
-        <div class="table-responsive" id="dolls_table">
-            <table id="table1" width="100%" class="table table-bordered table-striped hover compact"></table>
-        </div>
-      </div>
-    </div>
-    <!--DataTable: Dolls End-->
-    <!--Chart: Dolls-->
-    <div class="col-xs-12">
-      <div class="table-responsive" id="dolls_table2">
-          <table id="table2" width="100%" class="table table-bordered table-striped hover compact"></table>
-      </div>
-      <div id="chart"></div>
-    </div>
-    <!--Chart: Dolls End-->
-  </div>
-  <!--Data Visualization End-->
   <!--slide1-->
   <div class="py-5" id="dolls_slide">
     <div class="container">
@@ -166,6 +128,47 @@
   </div>
   <!--slide1 end-->
 
+  <!--Data Visualization-->
+  <!--Data Buttons-->
+  <div class="button_groups">
+     <div class="col-xs-12 d-flex justify-content-center">
+        <div class="btn-group ml-5 mr-3" role="group" aria-label="group">
+          <button type="button" class="btn btn-light show_btn" id="show_dolls_table">Statistics</button>
+          <button type="button" class="btn btn-light hide_btn" id="show_dolls_chart">Classified</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--Data Buttons End-->
+  <!--DataTable: Dolls-->
+  <div class="col-xs-12">
+    <div class="dolls_table">
+      <div class="col-xs-12">
+        <div class="table-responsive" id="dolls_table">
+            <table id="table1" width="100%" class="table table-bordered table-striped hover compact"></table>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--DataTable: Dolls End-->
+  <!--Chart: Dolls-->
+  <div class="col-xs-12">
+    <div class="col-xs-12">
+      <div class="col-xs-12 d-flex justify-content-center"> 
+        <div class="table-responsive col-lg-7 col-md-9 col-sm-12" id="dolls_table2">
+          <table id="table2" width="100%" class="table table-bordered table-striped hover"></table>
+        </div>
+      </div>
+      <div class="col-xs-12 d-flex justify-content-center">  
+        <div class="chart col-lg-8 col-md-10 col-sm-12" id="chart_whether">
+            <div id="chart"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--Chart: Dolls End-->
+  <!--Data Visualization End-->
+
   <!--text-->
   <div class="card text-center">
       <div class="blanklinemlg"></div>
@@ -175,45 +178,6 @@
   </div>
   <!--text End-->
 
-  <!--Data Buttons-->
-  <div class="button_groups">
-    <div class="col-xs-12 d-flex justify-content-center">
-        <div class="btn-group ml-5 mr-3" role="group" aria-label="First group">
-          <button type="button" class="btn btn-light show_btn" id="show_beauty_table">Show</button>
-          <button type="button" class="btn btn-light hide_btn" id="hide_beauty_table">Hide</button>
-        </div>
-        <p class="slide_content data_brief">Data Statistics for Beauty Products</p>
-
-        <div class="btn-group ml-5 mr-3" role="group" aria-label="Second group">
-          <button type="button" class="btn btn-light show_btn" id="show_beauty_chart">Show</button>
-          <button type="button" class="btn btn-light hide_btn" id="hide_beauty_chart">Hide</button>
-        </div>
-        <p class="slide_content data_brief">Data Analysis for Beauty Products</p>
-      </div>
-    </div>
-  </div>
-  <!--Data Buttons End-->
-  <!--Data Visualization-->
-  <div class="col-xs-12">
-    <!--DataTable: Dolls-->
-    <div class="dolls_table">
-      <div class="col-xs-12">
-        <div class="table-responsive" id="beauty_table">
-            <table id="table1" width="100%" class="table table-bordered table-striped hover compact"></table>
-        </div>
-      </div>
-    </div>
-    <!--DataTable: Cosmetics End-->
-    <!--Chart: Cosmetics-->
-    <div class="col-xs-12">
-      <div class="table-responsive" id="beauty_table2">
-          <table id="table2" width="100%" class="table table-bordered table-striped hover compact"></table>
-      </div>
-      <div id="chart"></div>
-    </div>
-    <!--Chart: Cosmetics End-->
-  </div>
-  <!--Data Visualization End-->
   <!--slide2-->
   <div class="py-5" id="cosmetics_slide">
     <div class="container">
@@ -241,6 +205,52 @@
     </div>
   </div>
   <!--slide2 end-->
+
+  <!--Data Visualization-->
+  <!--Data Buttons-->
+  <div class="button_groups">
+    <div class="col-xs-12 d-flex justify-content-center">
+        <div class="btn-group ml-5 mr-3" role="group" aria-label="group">
+          <button type="button" class="btn btn-light show_btn" id="show_type">See Type</button>
+          <button type="button" class="btn btn-light hide_btn" id="show_price">See Price</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--Data Buttons End-->
+  <!--Chart: Type-->
+  <div class="col-xs-12">
+    <div class="col-xs-12">
+      <div class="col-xs-12 d-flex justify-content-center"> 
+        <div class="table-responsive col-lg-7 col-md-10 col-sm-12" id="table_type">
+          <table id="table3" width="100%" class="table table-bordered table-striped hover compact"></table>
+        </div>
+      </div>
+      <div class="col-xs-12 d-flex justify-content-center">  
+        <div class="chart col-lg-8 col-md-10 col-sm-12" id="chart_type">
+            <div id="chart"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--Chart: Type End-->
+  <!--Chart: Price-->
+  <div class="col-xs-12">
+    <div class="col-xs-12">
+      <div class="col-xs-12 d-flex justify-content-center"> 
+        <div class="table-responsive col-lg-7 col-md-10 col-sm-12" id="table_price">
+          <table id="table4" width="100%" class="table table-bordered table-striped hover compact"></table>
+        </div>
+      </div>
+      <div class="col-xs-12 d-flex justify-content-center">  
+        <div class="chart col-lg-8 col-md-10 col-sm-12" id="chart_price">
+            <div id="chart"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--Chart: Price End-->
+  <!--Data Visualization End-->
 
   <!--Footer-->
   <footer class="section section_footer">

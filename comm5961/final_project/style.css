@@ -315,10 +315,10 @@
   outline:none;
   font-family: 'Josefin Sans';
   font-weight: bold;
-  font-size: 1.5em;
-  width: 5em;
-  height: 3em;
-  margin: 0;
+  font-size: 1.8em;
+  width: 10em;
+  height: 4em;
+  margin-top: 2em;
 }
 .show_btn:hover{
   background-color: rgba(87, 100, 105, 0.4);
@@ -342,10 +342,10 @@
   outline:none;
   font-family: 'Josefin Sans';
   font-weight: bold;
-  font-size: 1.5em;
-  width: 5em;
-  height: 3em;
-  margin: 0;
+  font-size: 1.8em;
+  width: 10em;
+  height: 4em;
+  margin-top: 2em;
 }
 .hide_btn:hover{
   background-color: rgba(87, 100, 105, 0.4);
@@ -431,16 +431,9 @@
 /* 空白行 End */
 
 /* data */
-.data_brief{
-  margin: 0 1em 0 0;
-  padding: 1em 1em 0em 1em;
-  color:#333;
-  box-shadow: 0 0.5em 0.5em 0 rgba(136, 136, 136, 0.3), 0 1em 2em 0 rgba(129, 129, 129, 0.2);
-}
 .table-responsive{
   font-family:'Montserrat';
 }
-
 /* data End */
 
 /* movies */

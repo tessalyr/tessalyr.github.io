@@ -96,7 +96,7 @@ $(document).ready(function(){
               y: {label: 'Movies Number'}
             },
             bar: {
-                title: "# of Items by Movies Category:",
+                title: "Whether Princess Movies",
             },
             color: {
               pattern: ['rgb(128, 159, 173)', 'rgb(202, 147, 169)']
@@ -104,6 +104,37 @@ $(document).ready(function(){
         });
    }); // end .getJSON
  }); // end button
+
+
+ $("button#show_a2").click(function() {
+
+  $("#table_whether").hide();
+  $("#table_released").hide();
+  $("#table_boxoffice").hide();
+
+  $("#text_box").html("The Number of Princess Movies Ranked in the Top 100");
+  $("#text_box").addClass("btn_text");
+  $("#text_box").css("font-size","1.7em");
+  $("#text_box").css("margin-top","35px");
+  $(".chart").css("margin-bottom","20px");
+
+  var chart = c3.generate({
+    data: {
+        x: 'x',
+        columns: [
+            ['x', 1991, 1992, 1995, 1998, 2009, 2010, 2012, 2013, 2015, 2016, 2017, 2018, 2019],
+            ['number of princess movies released', 1, 1, 1, 1, 1, 2, 2, 1, 1, 1, 1, 1, 4]
+        ]
+    },
+    axis: {
+      x: {label: 'Released Year'},
+      y: {label: 'Movies Number'}
+    },
+    color: {
+      pattern: ['rgb(128, 159, 173)', 'rgb(202, 147, 169)']
+    }
+  });
+}); // end button
 
 
 $("button#show_b").click(function() {
@@ -154,7 +185,7 @@ $("button#show_b").click(function() {
               y: {label: 'Movies Number'}
             },
             bar: {
-                title: "# of Items by Released Year:",
+                title: "Released Year",
             },
             color: {
               pattern: ['rgb(128, 159, 173)', 'rgb(202, 147, 169)']
@@ -212,7 +243,7 @@ $("button#show_c").click(function() {
               y: {label: 'Movies Number'}
             },
             bar: {
-                title: "# of Items by Box Office Level:",
+                title: "Box Office",
             },
             color: {
               pattern: ['rgb(128, 159, 173)', 'rgb(202, 147, 169, 0.9)','rgba(87, 100, 105, 0.5)','rgb(175, 113, 139)','rgba(87, 100, 105, 0.9)']
@@ -220,21 +251,6 @@ $("button#show_c").click(function() {
         });
   }); // end .getJSON
 }); // end button
-
-$("button#hide_all").click(function() {
-  $(".chart").hide();
-  $("#table_whether").hide();
-  $("#table_released").hide();
-  $("#table_boxoffice").hide();
-  $("#text_box").html("");
-}); // end button
-
-
-
-
-
-
-
 
 
 
@@ -252,7 +268,8 @@ $("button#hide_all").click(function() {
   });
 
   $("button#show_dolls_table").click(function() {
-      $("#dolls_table").show();
+      $("#dolls_table").toggle();
+      $(".table-responsive").css("margin","30px 0 10px 0");
       var items = [];
       var i = 0;
       var airtable_read_endpoint = "https://api.airtable.com/v0/appfU4wJMpJkHidFR/Princess%20Doll?api_key=keywZFkvBIh6rNMwS";
@@ -268,7 +285,6 @@ $("button#hide_all").click(function() {
                      items.push(value.fields.price);
                      items.push(value.fields.discount);
                      items.push(value.fields.score);
-                     items.push(value.fields.url);
                      dataSet.push(items);
                      console.log(items);
               }); // end .each
@@ -294,19 +310,17 @@ $("button#hide_all").click(function() {
                      defaultContent:""},
                    { title: "Score",
                      defaultContent:""},
-                   { title: "Link",
-                     defaultContent:""},
                ]
            } );
       }); // end .getJSON
    }); // end button
 
-  $("button#hide_dolls_table").click(function() {
-    $("#dolls_table").hide();
-  });
 
   $("button#show_dolls_chart").click(function() {
-    $("#dolls_table2").show();
+    $("#dolls_table2").toggle();
+    $("#chart").toggle();
+    $(".chart").css("margin-bottom","40px");
+    $(".table-responsive").css("margin-bottom","40px");
     var items = [];
     var i = 0;
     var airtable_read_endpoint = "https://api.airtable.com/v0/appfU4wJMpJkHidFR/Doll%20Category?api_key=keywZFkvBIh6rNMwS";
@@ -344,16 +358,111 @@ $("button#hide_all").click(function() {
               bar: {
                   title: "# of Items by Doll Category:",
               },
-
+              color: {
+                pattern: ['rgb(128, 159, 173)', 'rgb(202, 147, 169, 0.9)','rgba(87, 100, 105, 0.8)']
+              }
           });
     }); // end .getJSON
   }); // end button
 
-  $("button#hide_dolls_chart").click(function() {
-    $("#dolls_table2").hide();
-    $("#chart").hide();
-  }); // hide dolls chart
 
+  $("button#show_type").click(function() {
+    $("#table_type").toggle();
+    $("#chart").toggle();
+    $(".chart").css("margin-bottom","40px");
+    $(".table-responsive").css("margin-bottom","40px");
+    var items = [];
+    var i = 0;
+    var airtable_read_endpoint = "https://api.airtable.com/v0/appfU4wJMpJkHidFR/Colourpop%20Type?api_key=keywZFkvBIh6rNMwS";
+    var dataSet = [];
+    $.getJSON(airtable_read_endpoint, function(result) {
+          $.each(result.records, function(key,value) {
+              items = [];
+                  items.push(value.fields.type);
+                  items.push(value.fields.count);
+                  dataSet.push(items);
+                  console.log(items);
+            }); // end .each
+            console.log(dataSet);
+
+        $('#table3').DataTable( {
+            data: dataSet,
+            retrieve: true,
+            columns: [
+                { title: "Type",
+                  defaultContent:""},
+                { title: "Count",
+                    defaultContent:"" },
+            ]
+        } );
+
+        var chart = c3.generate({
+              data: {
+                  columns: dataSet,
+                  type : 'bar'
+              },
+              axis: {
+                x: {label: 'Type'},
+                y: {label: 'Count'}
+              },
+              bar: {
+                  title: "Disney × Colourpop Types",
+              },
+              color: {
+                pattern: ['rgb(128, 159, 173)', 'rgb(202, 147, 169, 0.9)','rgba(87, 100, 105, 0.5)','rgb(175, 113, 139)','rgba(87, 100, 105, 0.9)']
+              }
+          });
+    }); // end .getJSON
+  }); // end button
+
+  $("button#show_price").click(function() {
+    $("#table_price").toggle();
+    $("#chart").toggle();
+    $(".chart").css("margin-bottom","40px");
+    $(".table-responsive").css("margin-bottom","40px");
+    var items = [];
+    var i = 0;
+    var airtable_read_endpoint = "https://api.airtable.com/v0/appfU4wJMpJkHidFR/Colourpop%20Price?api_key=keywZFkvBIh6rNMwS";
+    var dataSet = [];
+    $.getJSON(airtable_read_endpoint, function(result) {
+          $.each(result.records, function(key,value) {
+              items = [];
+                  items.push(value.fields.price);
+                  items.push(value.fields.count);
+                  dataSet.push(items);
+                  console.log(items);
+            }); // end .each
+            console.log(dataSet);
+
+        $('#table4').DataTable( {
+            data: dataSet,
+            retrieve: true,
+            columns: [
+                { title: "Price",
+                  defaultContent:""},
+                { title: "Count",
+                    defaultContent:"" },
+            ]
+        } );
+
+        var chart = c3.generate({
+              data: {
+                  columns: dataSet,
+                  type : 'bar'
+              },
+              axis: {
+                x: {label: 'Price'},
+                y: {label: 'Count'}
+              },
+              bar: {
+                  title: "Disney × Colourpop Price",
+              },
+              color: {
+                pattern: ['rgb(128, 159, 173)', 'rgb(202, 147, 169, 0.9)']
+              }
+          });
+    }); // end .getJSON
+  }); // end button
 
 
 }); // document ready
