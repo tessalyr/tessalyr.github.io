@@ -21,7 +21,6 @@
         <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
         <script src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js"></script>
         <!--C3,D3-->
-        <link rel="stylesheet" href="c3-0.7.10/c3.css">
         <script src="c3-0.7.10/c3.min.js"></script>
         <script src="c3-0.7.10/d3.v5.min.js" charset="utf-8"></script>
         <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.4.11/d3.js"></script>
@@ -63,7 +62,7 @@
                         <a class="nav-link" href="movies.html">Movies <span class="sr-only">(current)</span></a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="themepark.html">Theme Park</a>
+                        <a class="nav-link" href="themepark.html">ThemePark</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="derivatives.html">Derivatives</a>
@@ -80,7 +79,7 @@
                 <div class="carousel-inner">
                     <div class="carousel-item active">
                         <div class="imgBox">
-                            <img src="http://images5.fanpop.com/image/photos/26900000/Disney-Princess-Banner-disney-princess-26937703-2560-650.jpg"
+                            <img src="https://dl.airtable.com/.attachmentThumbnails/70b0309e9724bf428cf5c1dd5f796df7/bc74036c"
                             class="d-block w-100" alt="...">
                         </div>
                         <div class="carousel-caption d-none d-md-block">
@@ -130,12 +129,12 @@
                 <div class="row col-sm-12 d-flex justify-content-center">
                     <div class="col-sm-12">
                         <h1 class="text-center" style="font-family: 'Cinzel'">
-                            <div class="blanklinemd"></div><b>Statistics</b><div class="blankline"></div>
+                            <div class="blanklinemd"></div><b>Statistics</b><div class="blanklinesm"></div>
                         </h1>
                     </div>
                     <div class="col-sm-10">
                         <h4 class="btn_text text-center">Below are the top 100 Walt Disney movies based on worldwide box office.
-                            <br> Here the 100 movies are grouped by: <b><i>Whether are Princess Movies</i></b> , <b><i>Released Year</i></b> and <b><i>Box Office</i></b> .
+                            <br> Here the 100 movies are grouped by: <b><i>Released Year</i></b>, <b><i>Box Office</i></b> and <b><i>Whether Princess Movies</i></b> .
                             <br> Follow the 4 steps to know more details</h4>
                     </div>
                 </div>
@@ -145,20 +144,18 @@
 
         <!--Data Visualization-->
         <!--Data Buttons-->
-        <div class="button_groups">
-            <div class="col-xs-12 d-flex justify-content-center">
-                <div class="btn-group ml-3 mr-3" role="group" aria-label="group1">
-                    <button type="button" class="btn btn-light show_btn movies_data" id="show_a">Step 1</button>
-                </div>
-                <div class="btn-group ml-3 mr-3" role="group" aria-label="group2">
-                    <button type="button" class="btn btn-light show_btn movies_data" id="show_a2">Step 2</button>
-                </div>
-                <div class="btn-group ml-3 mr-3" role="group" aria-label="group3">
-                    <button type="button" class="btn btn-light show_btn movies_data" id="show_b">Step 3</button>
-                </div>
-                <div class="btn-group ml-3 mr-3" role="group" aria-label="group4">
-                    <button type="button" class="btn btn-light show_btn movies_data" id="show_c">Step 4</button>
-                </div>
+        <div class="button_groups col-xs-12 d-flex justify-content-center">
+            <div class="btn-group ml-3 mr-3" role="group" aria-label="group1">
+                <button type="button" class="btn btn-light show_btn movies_data" id="show_b">Step 1</button>
+            </div>
+            <div class="btn-group ml-3 mr-3" role="group" aria-label="group2">
+                <button type="button" class="btn btn-light show_btn movies_data" id="show_c">Step 2</button>
+            </div>
+            <div class="btn-group ml-3 mr-3" role="group" aria-label="group3">
+                <button type="button" class="btn btn-light show_btn movies_data" id="show_a">Step 3</button>
+            </div>
+            <div class="btn-group ml-3 mr-3" role="group" aria-label="group4">
+                <button type="button" class="btn btn-light show_btn movies_data" id="show_a2">Step 4</button>
             </div>
         </div>
         <!--Data Buttons End-->
@@ -308,9 +305,9 @@
                 <div class="container">
                     <div>
                         <h3 class="subtitle">More Details</h3>
-                    </div><div class="blanklinemd"></div>
+                    </div>
                     <ul class="list-unstyled video-list-thumbs row"></ul>
-                    <h4 class="btn_text text-center">To know more about the <b><i>Evolution</i></b> and the <b><i>Culture</i></b> of the <b><i>Disney Princess Animation</i></b>, click on the button below:</h4>
+                    <h4 class="btn_text text-center">More details about the <b><i>Evolution</i></b> and the <b><i>Culture</i></b> of the <b><i>Disney Princess Animation</i></b> .</h4>
                     <div class="d-flex justify-content-center">
                         <button type="button" class="btn btn-light show_btn open_btn" id="show_animated"><b> OPEN </b></button>  
                     </div>
@@ -396,18 +393,12 @@
                 <div class="container">
                     <div>
                         <h3 class="subtitle">More Details</h3>
-                    </div><div class="blanklinemd"></div>
+                    </div>
                     <ul class="list-unstyled video-list-thumbs row"></ul>
-                    <h4 class="btn_text text-center">To know more about the <b><i>Evolution</i></b> and the <b><i>Culture</i></b> of the <b><i>Disney Princess Live-action Remake</i></b>, click on the button below:</h4>
+                    <h4 class="btn_text text-center">More details about the <b><i>Evolution</i></b> and the <b><i>Culture</i></b> of the <b><i>Disney Princess Live-action Remake</i></b> .</h4>
                     <div class="d-flex justify-content-center">
                         <button type="button" class="btn btn-light show_btn open_btn" id="show_remake"><b> OPEN </b></button> 
-                    </div>
-                    <div class="col-sm-12">
-                        <div class="airtable_embed d-flex justify-content-center">
-                            <iframe class="airtable-embed" id="airtable_remake" src="https://airtable.com/embed/shrDgQnniCxQYGgZx?backgroundColor=cyanLight&amp;viewControls=on"
-                            frameborder="0" onmousewheel="" width="100%" height="500" style="background: transparent; border: 1px solid #ccc; display:none;"></iframe>
-                        </div>
-                    </div>
+                    </div><div class="blankline"></div>
                 </div>
                 <!--Actress Cards-->
                 <div class="row d-flex justify-content-center" id="actress_card">
@@ -418,7 +409,7 @@
                                     <div class="row d-flex justify-content-center">
                                         <div class="col-lg-2 col-3 p-3">
                                             <div class="card">
-                                                <img class="card-img-top" src="https://dl.airtable.com/.attachmentThumbnails/1a2fb7154ae869b052ecc029d1184849/0cacf35c"
+                                                <img class="card-img-top" src="https://dl.airtable.com/.attachmentThumbnails/518b9a904028f1db5a160ad389c377b9/bab741f2"
                                                 alt="Card image cap">
                                                 <div class="card-body">
                                                     <h5 class="card-title">
@@ -430,7 +421,7 @@
                                         </div>
                                         <div class="col-lg-2 col-3 p-3">
                                             <div class="card">
-                                                <img class="card-img-top" src="https://dl.airtable.com/.attachmentThumbnails/bfaac9c6350512c21486bb550583324d/beedac3d"
+                                                <img class="card-img-top" src="https://dl.airtable.com/.attachmentThumbnails/d73d12c581c937c37c8ff4510cc84340/bfe34048"
                                                 alt="Card image cap">
                                                 <div class="card-body">
                                                     <h5 class="card-title">
@@ -442,7 +433,7 @@
                                         </div>
                                         <div class="col-lg-2 col-3 p-3">
                                             <div class="card">
-                                                <img class="card-img-top" src="https://dl.airtable.com/.attachmentThumbnails/ce6ef56847ee8e607d4fed1e9795f54e/6a1b16f5"
+                                                <img class="card-img-top" src="https://dl.airtable.com/.attachmentThumbnails/9e988ec078a36927b14b831a68b35fa6/87f72a74"
                                                 alt="Card image cap">
                                                 <div class="card-body">
                                                     <h5 class="card-title">
@@ -454,7 +445,7 @@
                                         </div>
                                         <div class="col-lg-2 col-3 p-3">
                                             <div class="card">
-                                                <img class="card-img-top" src="https://dl.airtable.com/.attachmentThumbnails/7186e519ed8d8c2ff7b81690fb45a268/ffcc4dc4"
+                                                <img class="card-img-top" src="https://dl.airtable.com/.attachmentThumbnails/b6a88c9d4e6ddd759efef73941a4a7d6/b370f3f0"
                                                 alt="Card image cap">
                                                 <div class="card-body">
                                                     <h5 class="card-title">
@@ -466,7 +457,7 @@
                                         </div>
                                         <div class="col-lg-2 col-3 p-3">
                                             <div class="card">
-                                                <img class="card-img-top" src="https://dl.airtable.com/.attachmentThumbnails/1a092631de1caf15621309ff487bbb60/26002123"
+                                                <img class="card-img-top" src="https://dl.airtable.com/.attachmentThumbnails/e9e2fb75c933fb8bbec0378850b9af73/c1a486be"
                                                 alt="Card image cap">
                                                 <div class="card-body">
                                                     <h5 class="card-title">
@@ -478,7 +469,7 @@
                                         </div>
                                         <div class="col-lg-2 col-3 p-3">
                                             <div class="card">
-                                                <img class="card-img-top" src="https://dl.airtable.com/.attachmentThumbnails/f9f398b745e895b5c4ebbe92237a39d5/94e8198f"
+                                                <img class="card-img-top" src="https://dl.airtable.com/.attachmentThumbnails/b5872e4b745170e0dec71ae91eeabd3c/5a5f2a01"
                                                 alt="Card image cap">
                                                 <div class="card-body">
                                                     <h5 class="card-title">
@@ -489,15 +480,13 @@
                                             </div>                                               
                                         </div>
                                         <!--Actress Details-->
-                                        <div class="btn_toggle col-xs-12 d-flex justify-content-center">
-                                            <div class="btn_text" id="overtext"><div class="blankline"></div>
-                                                <p>To know more about <b><i>Actresses</i></b> who play the princesses, click on the button below.</p>
+                                        <div class="col-xs-12 d-flex justify-content-center">
+                                            <div class="btn_text" id="overtext">
+                                                <p>More details about <b><i>Actresses</i></b> playing the princesses.</p>
                                             </div>
                                         </div>
-                                        <div class="btn_toggle col-xs-12 d-flex justify-content-center">
-                                            <div>
-                                                <button type="button" class="btn btn-light show_btn open_btn" id="show_airtable"><b> OPEN </b></button>
-                                            </div>
+                                        <div class="col-xs-12 d-flex justify-content-center">
+                                            <button type="button" class="btn btn-light show_btn open_btn" id="show_airtable"><b> OPEN </b></button>
                                         </div>
                                         <div class="col-sm-12">
                                             <div class="airtable_embed d-flex justify-content-center">

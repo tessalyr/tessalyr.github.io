@@ -1,6 +1,6 @@
 $(document).ready(function(){
   $("button#show_princess").click(function() {
-    $("#princess_table").toggle();
+    $("#princess_table").show();
     var items = [];
     var i = 0;
     var airtable_read_endpoint = "https://api.airtable.com/v0/appfU4wJMpJkHidFR/Homepage?api_key=keywZFkvBIh6rNMwS";
@@ -45,7 +45,7 @@ $(document).ready(function(){
          } );
     }); // end .getJSON
  }); // end button
-
+// end Overview Page
 
 
  $("button#show_a").click(function() {
@@ -54,7 +54,7 @@ $(document).ready(function(){
   $("#table_released").hide();
   $("#table_boxoffice").hide();
 
-  $("#text_box").html("Whether These Movies are Disney Princess Movies");
+  $("#text_box").html("Whether Top 100 Disney Movies are Princess Movies or Not");
   $("#text_box").addClass("btn_text");
   $("#text_box").css("font-size","1.7em");
   $("#text_box").css("margin-top","35px");
@@ -89,13 +89,10 @@ $(document).ready(function(){
       var chart = c3.generate({
             data: {
                 columns: dataSet,
-                type : 'bar'
+                type : 'donut'
             },
-            axis: {
-              x: {label: 'Whether Princess Movies'},
-              y: {label: 'Movies Number'}
-            },
-            bar: {
+            
+            donut: {
                 title: "Whether Princess Movies",
             },
             color: {
@@ -104,10 +101,10 @@ $(document).ready(function(){
         });
    }); // end .getJSON
  }); // end button
-
+ // end Step1
 
  $("button#show_a2").click(function() {
-
+  $(".chart").show();
   $("#table_whether").hide();
   $("#table_released").hide();
   $("#table_boxoffice").hide();
@@ -128,14 +125,14 @@ $(document).ready(function(){
     },
     axis: {
       x: {label: 'Released Year'},
-      y: {label: 'Movies Number'}
+      y: {label: 'Number'}
     },
     color: {
       pattern: ['rgb(128, 159, 173)', 'rgb(202, 147, 169)']
     }
   });
 }); // end button
-
+ // end Step2
 
 $("button#show_b").click(function() {
   $(".chart").show();
@@ -143,7 +140,7 @@ $("button#show_b").click(function() {
   $("#table_released").show();
   $("#table_boxoffice").hide();
 
-  $("#text_box").html("Movies Grouped by Released Year");
+  $("#text_box").html("Top 100 Movies Grouped by Released Year");
   $("#text_box").addClass("btn_text");
   $("#text_box").css("font-size","1.7em");
   $("#text_box").css("margin-top","35px");
@@ -182,7 +179,7 @@ $("button#show_b").click(function() {
             },
             axis: {
               x: {label: 'Released Year'},
-              y: {label: 'Movies Number'}
+              y: {label: 'Number'}
             },
             bar: {
                 title: "Released Year",
@@ -193,7 +190,7 @@ $("button#show_b").click(function() {
         });
   }); // end .getJSON
 }); // end button
-
+ //end Step3
 
 $("button#show_c").click(function() {
   $(".chart").show();
@@ -201,7 +198,7 @@ $("button#show_c").click(function() {
   $("#table_released").hide();
   $("#table_boxoffice").show();
 
-  $("#text_box").html("Movies Grouped by Box Office");
+  $("#text_box").html("Top 100 Movies Grouped by Box Office");
   $("#text_box").addClass("btn_text");
   $("#text_box").css("font-size","1.7em");
   $("#text_box").css("margin-top","35px");
@@ -239,8 +236,8 @@ $("button#show_c").click(function() {
                 type : 'bar'
             },
             axis: {
-              x: {label: 'BoxOffice Level'},
-              y: {label: 'Movies Number'}
+              x: {label: 'Box Office'},
+              y: {label: 'Number'}
             },
             bar: {
                 title: "Box Office",
@@ -251,10 +248,7 @@ $("button#show_c").click(function() {
         });
   }); // end .getJSON
 }); // end button
-
-
-
-
+ // end Step4
 
 
   $("button#show_animated").click(function(){
@@ -266,10 +260,16 @@ $("button#show_c").click(function() {
   $("button#show_airtable").click(function(){
       $("#airtable_actress").toggle();
   });
+// end Movies Page
+
 
   $("button#show_dolls_table").click(function() {
       $("#dolls_table").toggle();
-      $(".table-responsive").css("margin","30px 0 10px 0");
+      $("#dolls_table2").hide();
+      $("#chart").hide();
+
+      $(".table-responsive").css("margin","30px 0 20px 0");
+      $(".chart").css("margin","0");
       var items = [];
       var i = 0;
       var airtable_read_endpoint = "https://api.airtable.com/v0/appfU4wJMpJkHidFR/Princess%20Doll?api_key=keywZFkvBIh6rNMwS";
@@ -314,13 +314,16 @@ $("button#show_c").click(function() {
            } );
       }); // end .getJSON
    }); // end button
-
+  // end dolls table
 
   $("button#show_dolls_chart").click(function() {
     $("#dolls_table2").toggle();
     $("#chart").toggle();
-    $(".chart").css("margin-bottom","40px");
-    $(".table-responsive").css("margin-bottom","40px");
+    $("#dolls_table").hide();
+
+    $(".chart").css("margin","30px 0 30px 0");
+    $(".table-responsive").css("margin","10px 0 40px 0");
+
     var items = [];
     var i = 0;
     var airtable_read_endpoint = "https://api.airtable.com/v0/appfU4wJMpJkHidFR/Doll%20Category?api_key=keywZFkvBIh6rNMwS";
@@ -364,11 +367,13 @@ $("button#show_c").click(function() {
           });
     }); // end .getJSON
   }); // end button
+  // end dolls chart
 
 
   $("button#show_type").click(function() {
     $("#table_type").toggle();
     $("#chart").toggle();
+    
     $(".chart").css("margin-bottom","40px");
     $(".table-responsive").css("margin-bottom","40px");
     var items = [];
@@ -463,7 +468,7 @@ $("button#show_c").click(function() {
           });
     }); // end .getJSON
   }); // end button
-
+// end Derivatives Page
 
 }); // document ready
 
