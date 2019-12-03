@@ -16,7 +16,9 @@ address,caption,cite,code,dfn,em,var {font-style:normal;font-weight:normal}  /* 
 caption {display:none;}    /* 重置表格标题为隐藏 */
 table {width:100%;border-collapse:collapse;border-spacing:0;table-layout:fixed;}    /* 重置table属性 */
 img{vertical-align:top}  /* 图片在当前行内的垂直位置 */
-
+html {
+  scroll-behavior: smooth;
+}
  
 /* 页面设置 */
  
