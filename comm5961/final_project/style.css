@@ -390,18 +390,19 @@
 }
 
 #show_districts{
+  background-color: rgb(87, 100, 105);
+  color:white; 
   font-family: 'Josefin Sans';
   font-weight: bold;
   font-size: 1.2em;
-  background-color: rgb(87, 100, 105);
-  color:white; 
-  margin: 1em 0 2em 0;
-  padding: 1em 1.2em 0.9em 0.3em;
+  height: 3em;
+  width: 8.5em;
+  margin: 1em 0 0 0;
   border-radius: 0.2em;
   box-shadow: 0 0.5em 0.5em 0 rgba(107, 106, 106, 0.253), 0 1em 2em 0 rgba(119, 118, 118, 0.253);
 }
 #show_districts:hover {box-shadow: 0 1em 1em 0 rgba(107, 106, 106, 0.24), 0 1em 2em 0 rgba(119, 118, 118, 0.19);}
-.fa-map-marker{font-size: 1.3em;}
+.fa-map-marker{font-size: 1.1em;}
 .fa-location-arrow{font-size: 1em; color:rgb(87, 100, 105); margin-left:0.5em;}
 
 #show_tripadvisor{
