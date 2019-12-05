@@ -251,7 +251,7 @@
   background-attachment: fixed;
 }
 #map{
-  height: 40em; 
+  height: 45em; 
   width: 100%;
   bottom:0;
   left:0;
@@ -416,8 +416,8 @@
   font-weight: bold;
   font-size: 1.2em;
   height: 3em;
-  width: 8.5em;
-  margin: 1em 0 0 0;
+  width: 15em;
+  margin: 1em 0 2em 0;
   border-radius: 0.2em;
   box-shadow: 0 0.5em 0.5em 0 rgba(107, 106, 106, 0.253), 0 1em 2em 0 rgba(119, 118, 118, 0.253);
 }
