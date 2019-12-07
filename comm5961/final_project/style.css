@@ -239,6 +239,7 @@
   color: rgb(0, 0, 0);
   text-align: center;
 }
+.movies_modal{width:80%}
 
 #actresses {
   display: none;
