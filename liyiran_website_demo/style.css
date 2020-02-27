@@ -1,0 +1,512 @@
+@import url('https://fonts.googleapis.com/css?family=Josefin+Sans|Merriweather+Sans|Montserrat|Questrial&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Marcellus+SC&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Arapey|Cinzel|Cookie|News+Cycle|Philosopher|Poiret+One|Sulphur+Point&display=swap');
+
+.overlay1 {
+  position: fixed;
+  display: flex;
+  margin: 0 0 0 0;
+  padding: 0 2em 0 2em;
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  color: rgb(0, 0, 0);
+  text-align: center;
+}
+.disney_icon{
+  width: 4em;
+  margin-bottom:4em;
+  filter: invert(33%) sepia(72%) saturate(10%) hue-rotate(314deg) brightness(100%) contrast(88%);
+}
+.enterTitle {
+  font-family: 'WaltographRegular';
+  color: #666; text-shadow: -0.1em 0.1em 0.1em rgba(172, 72, 72, 0.4);
+  font-size: 6vw;
+  letter-spacing: 0.05em;
+}
+.enterSubTitle {
+  font-family: 'Marcellus SC';
+  font-size: 2.6em;
+  color: #666; text-shadow: -0.2em 0.2em 0.2em rgba(172, 72, 72, 0.5);
+  margin-top:1em;
+  letter-spacing: 0.2em;
+  line-height: 1.5em;
+}
+.enterLink {
+  font-family: 'Marcellus SC';
+  font-size: 2em;
+  color: #666; text-shadow: 0.05em 0.05em 2em rgba(255, 34, 34, 0.8);
+  margin-top: 3em;
+}
+.enterLink:hover {color:#555}
+.fa {color: rgb(250, 250, 250)} /* icon颜色 */
+.fa-flip-vertical {
+  color:#666;
+  margin-right: 0.3em;
+}
+
+.et-right {font-size: 1em;}
+/* navbar */
+.navbar {
+  margin:0;
+  background:rgb(206, 159, 178);
+}
+.nav-item {margin-left: 0.3em;}
+.navbar-brand{
+  font-family: 'WaltographRegular';
+  font-size: x-large;
+  padding-top: 0.7em;
+  letter-spacing: 0.03em;
+}
+.nav-link {font-size: 1.1em;} 
+.navbar-toggler{
+  margin: 1em
+}
+/* navbar End */
+/* second nav*/
+.second_nav{
+  padding: 3em 0 3em 0;
+  margin-bottom: 1.5em;
+  background: rgb(87, 100, 105, 0.1);
+}
+#second_nav_shopping{
+  margin: 5.4em 0 0 0;
+  background: #fff;
+}
+/* second nav End */
+.imgBox{
+  background-image:linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0), rgba(0, 0, 0, 0), rgba(0, 0, 0, 0),rgba(0, 0, 0, 0.507),rgba(0, 0, 0, 0.801), rgb(0, 0, 0));
+}
+.imgBox img {mix-blend-mode:multiply;}
+.newsTitle{
+  margin-bottom:0.5em;
+  font-size: 3em;
+  font-family: 'Josefin Sans';
+  color: #fff; text-shadow: 0.1em -0.1em 0.1em black;
+}
+.newsContent {
+  margin-top:1em;
+  margin-bottom:0.3em;
+  font-size:1.5em;
+  color: #fff; text-shadow: 0.1em -0.1em 0.25em black;
+}
+.newsAuthor {
+  margin-top:2.5em;
+  margin-bottom:0.5em;
+  color: #fff; text-shadow: 0.1em -0.1em 0.25em black;
+}
+.text-center{
+  font-family: 'Josefin Sans';
+  color:#333; text-shadow: 0 0 0.1em rgb(180, 180, 180);
+}
+.section {color: #444;}
+.shadow{
+  font-size: 1.5em;
+  text-align: center;
+  font-family: 'Josefin Sans';
+  color: #333; text-shadow: 0 0 0.1em rgb(180, 180, 180);
+  background: rgba(228, 151, 181, 0.15);
+}
+.shadow:hover{
+  color: #111; text-shadow: 0.1em 0.1em 0.3em rgba(125, 156, 182, 0.562);
+  background: #fff;
+}
+.imgback{
+  background: rgb(230, 197, 210);
+}
+.imgopa{
+  opacity:0.6; filter: alpha(opacity=60);
+}
+.imgopa:hover{
+  opacity:1; filter:alpha(Opacity=100);
+}
+.modal-title{
+  font-size: 1.8em;
+  font-family: 'Josefin Sans';
+}
+/* 备用 */
+.modal_body_img {
+  height: 300px;
+}
+.modal_body_subtitle{
+  font-family: 'Josefin Sans';
+  padding: 20px 30px 0 30px;
+  margin: 20px 0 0 0;
+}
+.modal_body_content {
+  font-family: 'Josefin Sans';
+  font-size: 15px;
+  line-height: 30px;
+  padding: 20px 30px 20px 30px;
+  margin: 10px 0 20px 0;
+  background-color: rgb(206, 159, 178, 0.12);
+  color: #333;
+}
+/* 备用 */
+
+
+/* footer */
+.footer-brand{
+  font-family: 'WaltographRegular';
+  color:rgba(87, 100, 105, 0.8);
+  margin:3em 0 0.2em 0;
+  letter-spacing: 0.03em;
+}
+.footer-content{
+  color:rgba(87, 100, 105, 0.8);
+  word-spacing: 1em;
+  font-family: 'Philosopher';
+}
+.footer_current{color:rgba(87, 100, 105, 0.6);font-weight: bold}
+.footer_navlink:hover{color:rgb(206, 159, 178)}
+.fa-instagram{color:rgba(87, 100, 105, 0.9); margin:0 0.25em 0 0.25em} .fa-instagram:hover{color:rgb(206, 159, 178)}
+.fa-twitter{color:rgba(87, 100, 105, 0.9); margin:0 0.25em 0 0.25em} .fa-twitter:hover{color:rgb(206, 159, 178)}
+.fa-facebook{color:rgba(87, 100, 105, 0.9); margin:0 0.25em 0 0.25em} .fa-facebook:hover{color:rgb(206, 159, 178)}
+.fa-pinterest{color:rgba(87, 100, 105, 0.9); margin:0 0.25em 0 0.25em} .fa-pinterest:hover{color:rgb(206, 159, 178)}
+/* footer End */
+/* card */
+#card_title {
+  color:white;
+  margin:0;
+}
+#card_intro {
+  color:rgb(226, 226, 226);
+  font-family: 'Josefin Sans';
+  font-size: large;
+}
+.card-title {
+  font-family: 'Josefin Sans';
+  color:#333; text-shadow: 0 0 0.2em rgb(180, 180, 180);
+}
+.card-text {
+  font-family: 'Josefin Sans';
+  color: #444; text-shadow: 0 0 0.1em rgb(180, 180, 180);
+}
+.text_header{
+  background:rgba(87, 100, 105, 0.1);
+}
+.text_body{
+  background:rgba(87, 100, 105, 0.1);
+  height:20em; 
+  float:left; 
+  overflow-y: scroll
+}
+.text_footer{
+  background:rgba(87, 100, 105, 0.15);
+}
+.text_title{
+  margin: 0.7em 12% 0.5em 12%;
+  text-align: left;
+}
+.text_content{
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-size: 1.6em;
+  line-height: 1.6em;
+  margin: 1em 10vw 1em 10vw;
+  text-align: left;
+  color: #444; text-shadow: 0 0 0;
+}
+.nav-link-title{ 
+  font-size: 1.5em; 
+  font-family: 'Josefin Sans';
+  color: rgb(52, 88, 102); text-shadow: 0 0 0.2em rgba(255, 255, 255);
+} 
+.nav-link-title:hover {color:#000; text-shadow: 0 0 0.2em  rgba(164, 187, 196, 0.479);}
+/* card End */
+.subtitle {
+  color:#555;
+  font-family: 'Marcellus SC';
+
+}
+.video_row {margin:2em 3em 0 3em}
+.video_title {margin-top:0.5em; color:#333}
+.pointer{cursor: pointer;}
+.fa-play-circle{position: relative; margin:0em; padding:0}
+.overlay {
+  position: absolute;
+  display: flex;
+  top: 0;
+  bottom: 2em;
+  left: 0;
+  right: 0;
+  z-index: 10;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  color: rgb(0, 0, 0);
+  text-align: center;
+}
+.movies_modal{width:80%}
+
+#actresses {
+  display: none;
+}
+#actress_card {
+  background-image: linear-gradient(rgba(255, 116, 181, 0.2), rgba(89, 222, 255, 0.5)),  url('https://images.pexels.com/photos/1831234/pexels-photo-1831234.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260');
+  background-position: right bottom;  
+  background-size: cover; 
+  background-repeat: repeat; 
+  background-attachment: fixed;
+}
+#map{
+  height: 44em; 
+  width: 100%;
+  bottom:0;
+  left:0;
+  right:0;
+  border:3px dashed rgba(87, 100, 105, 0.5);
+}
+.location_name{font-size: 1.2em;}
+.travelguides_container{
+  background-image: linear-gradient(rgba(255, 255, 255, 0.589), rgba(255, 255, 255, 0.767)), url(https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1574490508830&di=ae04769b93faaffe357a0e39c58a73f6&imgtype=jpg&src=http%3A%2F%2Fimg3.imgtn.bdimg.com%2Fit%2Fu%3D476851863%2C1813084086%26fm%3D214%26gp%3D0.jpg); 
+  background-position: right bottom;  
+  background-size: cover; 
+  background-repeat: repeat; 
+  background-attachment: fixed;
+}
+.mb-0{
+  font-family: 'Cinzel';
+  color: rgb(47, 66, 63); text-shadow: 0 0 0.1em rgba(180, 180, 180, 0.8);
+  line-height: 1.8em;
+}
+.mb_second{
+  font-family: 'Josefin Sans';
+  color: rgb(62, 77, 74); 
+  font-size: 1.3em;
+  line-height: 1.8em;
+  letter-spacing: 0.05em;
+  margin-right: 1.5em;
+}
+.well{
+  height: 50em;
+  margin-top: 1em;
+}
+.slide_title{
+  font-family: 'Cinzel';
+  color:#333; text-shadow: 0 0 0.1em rgb(180, 180, 180);
+  margin-bottom: 1em;
+}
+.slide_content{
+  font-size: 1.5em;
+  font-family: 'Josefin Sans';
+  color: #444;
+  margin-bottom: 1em;
+  line-height: 1.5em;
+}
+#dolls_slide{
+  margin-top:0;
+  background-image: linear-gradient(rgba(255, 182, 216, 0.3), rgba(220, 255, 255, 0.2)), url(https://images.pexels.com/photos/2088203/pexels-photo-2088203.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500); 
+  background-position: right bottom;  
+  background-size: cover; 
+  background-repeat: repeat; 
+  background-attachment: fixed;
+}
+#cosmetics_slide{
+  margin-top:0;
+  background-image: linear-gradient(rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.3)), url(https://images.pexels.com/photos/2088203/pexels-photo-2088203.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500); 
+  background-position: right bottom;  
+  background-size: cover; 
+  background-repeat: repeat; 
+  background-attachment: fixed;
+}
+
+/* 按钮 */
+.btn{font-size: 1.1em; border-radius: 0; padding:0.7em 1em 0.7em 1em;}
+.btn:hover {box-shadow: 0 0.5em 0.5em 0 rgba(255, 255, 255, 0.24), 0 1em 2em 0 rgba(255, 255, 255, 0.19);}
+.btn_toggle {margin: 0.5em 0 1em 0;}
+.btn_text{
+  font-family: 'Josefin Sans';
+  color:#555;
+  margin: 1em 0 1em 0;
+  line-height: 2.5em;
+}
+#overtext{
+  color:#666;
+  margin-top:1.2em;
+  font-size:1.8em;
+}
+.airtable_embed {margin-top:1em; margin-bottom:2.5em;}
+.show_btn{
+  background-color: rgb(202, 147, 169);
+  color:#fff;
+  box-shadow: 0em 0.2em 0.2em 0em rgba(189, 187, 187, 0.9), 0 0.3em 0.3em 0 rgba(189, 187, 187, 0.24), 0 1em 1em 0 rgba(180, 179, 179, 0.19);
+  outline:none;
+  font-family: 'Josefin Sans';
+  font-weight: bold;
+  font-size: 1.6em;
+  width: 10em;
+  height: 4em;
+  margin-top: 1em;
+}
+.show_btn:hover{
+  background-color: rgba(87, 100, 105, 0.4);
+  color:#fff;
+  box-shadow: 0 0.5em 0.5em 0 rgba(136, 136, 136, 0.6), 0 1em 2em 0 rgba(129, 129, 129, 0.7);
+  outline:none;
+}
+.show_btn:active{
+  outline:none;
+}
+.show_btn:focus{
+  background-color: rgba(87, 100, 105, 0.9);
+  color:white; 
+  box-shadow: 0 0.3em 0.3em 0 rgba(107, 106, 106, 0.24), 0 1em 1em 0 rgba(119, 118, 118, 0.19);
+  outline:none;
+}
+.hide_btn{
+  background-color: rgb(128, 159, 173);
+  color:#fff;
+  box-shadow: 0em 0.2em 0.2em 0em rgba(189, 187, 187, 0.9), 0 0.3em 0.3em 0 rgba(189, 187, 187, 0.24), 0 1em 1em 0 rgba(180, 179, 179, 0.19);
+  outline:none;
+  font-family: 'Josefin Sans';
+  font-weight: bold;
+  font-size: 1.6em;
+  width: 10em;
+  height: 4em;
+  margin-top: 1em;
+}
+.hide_btn:hover{
+  background-color: rgba(87, 100, 105, 0.4);
+  color:#fff;
+  box-shadow: 0 0.5em 0.5em 0 rgba(136, 136, 136, 0.6), 0 1em 2em 0 rgba(129, 129, 129, 0.7);
+  outline:none;
+}
+.hide_btn:active{
+  outline:none;
+}
+.hide_btn:focus{
+  background-color: rgba(87, 100, 105, 0.9);
+  color:white; 
+  box-shadow: 0 0.3em 0.3em 0 rgba(107, 106, 106, 0.24), 0 1em 1em 0 rgba(119, 118, 118, 0.19);
+  outline:none;
+}
+.open_btn{
+  font-size: 1.8em;
+  width: 6em;
+  height: 3em;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+}
+.movies_data{
+  font-size: 2.2em;
+  width: 6em;
+  height: 4em;
+}
+
+#show_airtable{margin:0}
+#show_airtable:hover{
+  background-color: rgba(87, 100, 105, 0.4);
+  color:#fff;
+  box-shadow: 0 0.5em 0.5em 0 rgba(136, 136, 136, 0.6), 0 1em 2em 0 rgba(129, 129, 129, 0.7);
+  outline:none;
+}
+#show_airtable:focus{
+  background-color: rgba(87, 100, 105, 0.9);
+  color:white; 
+  box-shadow: 0 0.3em 0.3em 0 rgba(107, 106, 106, 0.24), 0 1em 1em 0 rgba(119, 118, 118, 0.19);
+  outline:none;
+}
+
+#show_districts{
+  background-color: rgb(87, 100, 105);
+  color:white; 
+  font-family: 'Josefin Sans';
+  font-weight: bold;
+  font-size: 1.2em;
+  height: 3em;
+  width: 15em;
+  margin: 0.8em 0 2em 0;
+  border-radius: 0.2em;
+  box-shadow: 0 0.5em 0.5em 0 rgba(107, 106, 106, 0.253), 0 1em 2em 0 rgba(119, 118, 118, 0.253);
+}
+#show_districts:hover {box-shadow: 0 1em 1em 0 rgba(107, 106, 106, 0.24), 0 1em 2em 0 rgba(119, 118, 118, 0.19);}
+.fa-map-marker{font-size: 1.1em;}
+.fa-location-arrow{font-size: 1em; color:rgb(87, 100, 105); margin-left:0.5em;}
+
+#show_tripadvisor{
+  background-color: rgb(197, 138, 161);
+  color:white; 
+  font-size: 12px;
+  box-shadow: 0 0.5em 0.5em 0 rgba(107, 106, 106, 0.2), 0 1em 2em 0 rgba(119, 118, 118, 0.2);
+}
+#show_tripadvisor:hover{
+  background-color: rgb(175, 113, 139);
+  box-shadow: 0 1em 1em 0 rgba(107, 106, 106, 0.3), 0 1em 2em 0 rgba(119, 118, 118, 0.2);
+}
+
+
+/* 按钮 End */
+
+/* 空白行 */
+.blanklinesm {height:0.5em;}
+.blankline {height:1em;}
+.blanklinemd {height:2em;}
+.blanklinemlg {height:4em;}
+.blanklinelg {height:6em;}
+/* 空白行 End */
+
+/* data */
+.table-responsive{
+  font-family:'Montserrat';
+}
+/* data End */
+
+/* movies */
+.video-list-thumbs > li{
+    margin-bottom:12px;
+}
+.video-list-thumbs > li > a{
+	display:block;
+	position:relative;
+	background-color: rgb(247, 247, 247);
+	color: #444;
+	padding: 5px;
+	border-radius:3px;
+  box-shadow:0 2px 5px rgba(0,0,0,.15);
+}
+.video-list-thumbs > li > a:hover{
+	box-shadow:0 2px 5px rgba(0,0,0,.3);
+	text-decoration:none
+}
+.video-list-thumbs h2{
+	bottom: 0;
+  font-size: 14px;
+  color: #555;
+	margin: 12px 0 12px 2px;
+}
+.video-list-thumbs .glyphicon-play-circle{
+    font-size: 50px;
+    opacity: 0.6;
+    position: absolute;
+    right: 41%;
+    top: 30%;
+    color:rgba(255, 255, 255, 0.9);
+    text-shadow: 0 1px 3px rgba(0,0,0,.5);
+    transition:all 500ms ease-in-out;
+}
+.video-list-thumbs > li > a:hover .glyphicon-play-circle{
+	color:#fff;
+	opacity:1;
+	text-shadow:0 1px 3px rgba(0,0,0,.8);
+}
+.video-list-thumbs .duration{
+	background-color: rgba(0, 0, 0, 0.4);
+	color: #fff;
+    font-size: 12px;
+    padding: 2px 4px 2.2px 4.2px;
+	font-weight: bold;
+	left: 12px;
+	position: absolute;
+	top: 12px;
+    transition:all 500ms ease;
+}
+.video-list-thumbs > li > a:hover .duration{
+	background-color:rgba(0, 0, 0, 0.7);
+}
+.imgopa1{
+  opacity:0.8; filter: alpha(opacity=80);
+}
+/* movies End */

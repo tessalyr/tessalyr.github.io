@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <!-- CSS CDN -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/c3/0.1.29/c3.css" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.min.css">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/c3/0.1.29/c3.css" rel="stylesheet" type="text/css">
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  <!--Leaflet-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.3.4/leaflet.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.3.4/leaflet.js"></script>
+  <script src="https://api.tiles.mapbox.com/mapbox.js/plugins/leaflet-markercluster/v0.4.0/leaflet.markercluster.js"></script>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.5.1/dist/leaflet.css">
+  <!--Leaflet End-->
+  
+  <!--My Settings-->
+  <link rel="stylesheet" href="custom.css">
+  <link rel="stylesheet" href="style.css">
+  <title>Disney Princess World</title>
+  <link rel="stylesheet" media="screen" href="https://fontlibrary.org/face/waltograph" type="text/css">
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-153192597-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-153192597-1', { 'optimize_id': 'GTM-5RSN7PT'});
+</script>
+</head>
+
+<body data-spy="scroll">
+  <!--Navbar-->
+  <nav class="navbar navbar-fixed-top navbar-expand-md navbar-dark">
+      <div class="col-xs-12 col-md-7 col-lg-8 col-xl-9 d-flex justify-content-between">
+          <a class="navbar-brand" href="entry.html">DisneyPrincessWorld</a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+          </button>
+      </div>     
+      <div class="collapse navbar-collapse"  id="navbarTogglerDemo02">
+          <ul class="navbar-nav mr-auto  mt-2 mt-lg-0">
+              <li class="nav-item">
+                  <a class="nav-link" href="overview.html">Overview</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="movies.html">Movies</a>
+              </li>
+              <li class="nav-item active">
+                  <a class="nav-link" href="themepark.html">ThemePark <span class="sr-only">(current)</span></a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="derivatives.html">Derivatives</a>
+              </li>
+          </ul>
+      </div>
+  </nav>
+  <!--Navebar End-->
+  <!--Map-->
+  <div class="map_container col-sm-12">
+    <!--Headline-->
+    <div class="row d-flex justify-content-center">
+      <div class="col-sm-12">
+        <div class="blanklinelg"></div>
+        <div class="blanklinemlg"></div>
+        <h1 class="text-center">Princess Theme Parks</h1>
+        <div class="blanklinemd"></div>
+        <h4 class="text-center">Where people can have first-hand experience of Disney Princess Culture</h4>
+        <div class="blanklinemd"></div><div class="blankline"></div>
+      </div>
+    </div>
+    <!--Headline End-->
+    <div class="map col-lg-8 col-sm-12 d-flex justify-content-center">
+      <div class="map col-sm-11" id="map"></div>
+    </div>
+    <div class="col-lg-4 col-sm-12" id="location">
+      <ul class="col-lg-10 col-sm-12">
+        <li>
+          <button type="button" class="btn btn-light" id="show_districts" onclick="show_districts2();">
+            <i class="fa fa-fw fa-map-marker pull-left text-inverse"></i> See Parks in California
+          </button>
+        </li>
+        <li>
+          <a href="https://disneyland.disney.go.com/attractions/disney-california-adventure/little-mermaid-ariels-undersea-adventure/" target="_blank">
+            <div class="shadow p-4 mb-5 rounded location_name">Ariel's Undersea Adventure</div>
+          </a>
+        </li>
+        <li>
+          <a href="https://disneyland.disney.go.com/attractions/disneyland/snow-whites-scary-adventures/" target="_blank">
+            <div class="shadow p-4 mb-5 rounded location_name">Snow White's Scary Adventures</div>
+          </a>
+        </li>
+        <li>
+          <button type="button" class="btn btn-light" id="show_districts" onclick="show_districts1();">
+            <i class="fa fa-fw fa-map-marker pull-left text-inverse"></i> See Parks in Florida 
+          </button>
+        </li>
+        <li>
+          <a href="https://disneyworld.disney.go.com/attractions/magic-kingdom/under-the-sea-journey-of-the-little-mermaid/" target="_blank">
+            <div class="shadow p-4 mb-5 rounded location_name">Journey of the Little Mermaid</div>
+          </a>
+        </li>
+        <li>
+          <a href="https://disneyworld.disney.go.com/en-eu/attractions/magic-kingdom/enchanted-tales-with-belle/" target="_blank">
+            <div class="shadow p-4 mb-5 rounded location_name">Enchanted Tales with Belle</div>
+          </a>
+        </li>
+        <li>
+          <a href="https://disneyworld.disney.go.com/en-eu/attractions/magic-kingdom/seven-dwarfs-mine-train/" target="_blank">
+            <div class="shadow p-3 mb-5 rounded location_name">Seven Dwarfs Mine Train</div>
+          </a>
+        </li>
+        <div class="blanklinelg"></div>
+      </ul>
+    </div>
+  </div>
+  <!--Map End-->
+  <!--Travel Guides-->
+  <div class="travelguides_container col-sm-12">
+    <div class="py-5">
+      <div class="container">
+        <div class="row">
+          <div class="text-center mx-auto col-md-12">
+                <div class="blanklinemlg"></div>
+            <h1 class="text-center mb-4"><b>Travel Guides</b></h1>
+                <div class="blankline"></div>
+            <p class="text-center lead">Here are Travel Guides from <b><i> tripadvisor.com </i></b></p>
+                <div class="blanklinesm"></div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-6 p-5">
+            <div class="card">
+              <div class="card-body p-5">
+                <div class="row">
+                  <div class="col-md-4 col-3"> <img class="img-fluid d-block rounded-circle" src="https://dl.airtable.com/.attachmentThumbnails/d32e30ae04becfc1c55abb668a220481/db3a8def"> </div>
+                  <div class="d-flex  col-md-8 flex-column justify-content-center align-items-start col-9">
+                    <p class="mb-0 lead"> <b>Journey of The Little Mermaid</b> </p><div class="blankline"></div>
+                  </div>
+                </div>
+                <div class="d-flex justify-content-end align-items-center">
+                   <h5 class="mb-0 mb_second">Overview &amp; Review</h5>
+                   <button class="btn" data-toggle="collapse" data-target="#target1" id="show_tripadvisor">tripadvisor.com</button>
+                </div>
+                <div class="collapse" id="target1">
+                  <div class="well">
+                      <iframe src="https://en.tripadvisor.com.hk/Attraction_Review-g34515-d8563167-Reviews-Under_the_Sea_Journey_of_The_Little_Mermaid-Orlando_Florida.html#REVIEWS" width="100%" height="100%" frameborder="0" name="tripadvisor" scrolling="yes">   
+                      </iframe>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 p-5">
+            <div class="card">
+              <div class="card-body p-5">
+                <div class="row">
+                  <div class="col-md-4 col-3"> <img class="img-fluid d-block rounded-circle" src="https://dl.airtable.com/.attachmentThumbnails/75bb01d4f8a89d62284574517c6190be/02222736"> </div>
+                  <div class="d-flex  col-md-8 flex-column justify-content-center align-items-start col-9">
+                    <p class="mb-0 lead"> <b>Snow White's Scary Adventures</b> </p><div class="blankline"></div>
+                    
+                  </div>
+                </div>
+                <div class="d-flex justify-content-end align-items-center">
+                   <h5 class="mb-0 mb_second">Overview &amp; Review</h5>
+                   <button class="btn" data-toggle="collapse" data-target="#target2" id="show_tripadvisor">tripadvisor.com</button>
+                </div>
+                <div class="collapse" id="target2">
+                  <div class="well">
+                      <iframe src="https://en.tripadvisor.com.hk/Attraction_Review-g29092-d8563363-Reviews-Snow_White_s_Scary_Adventures-Anaheim_California.html?m=19905" width="100%" height="100%" frameborder="0" name="tripadvisor" scrolling="yes">   
+                      </iframe>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 p-5">
+            <div class="card">
+              <div class="card-body p-5">
+                <div class="row">
+                  <div class="col-md-4 col-3"> <img class="img-fluid d-block rounded-circle" src="https://dl.airtable.com/.attachmentThumbnails/2732fee0cc45206e931a03761762061e/b885c1fa"> </div>
+                  <div class="d-flex  col-md-8 flex-column justify-content-center align-items-start col-9">
+                    <p class="mb-0 lead"> <b>Enchanted Tales with Belle</b> </p><div class="blankline"></div>
+                  </div>
+                </div>
+                <div class="d-flex justify-content-end align-items-center">
+                   <h5 class="mb-0 mb_second">Overview &amp; Review</h5>
+                   <button class="btn" data-toggle="collapse" data-target="#target3" id="show_tripadvisor">tripadvisor.com</button>
+                </div>
+                <div class="collapse" id="target3">
+                  <div class="well">
+                      <iframe src="https://www.tripadvisor.com/Attraction_Review-g34515-d8562302-Reviews-Enchanted_Tales_With_Belle-Orlando_Florida.html#REVIEWS" width="100%" height="100%" frameborder="0" name="tripadvisor" scrolling="yes">   
+                      </iframe>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 p-5">
+            <div class="card">
+              <div class="card-body p-5">
+                <div class="row">
+                  <div class="col-md-4 col-3"> <img class="img-fluid d-block rounded-circle" src="https://dl.airtable.com/.attachmentThumbnails/b2457b6b75d323f1d5cff8566d49fff8/9fca8e03"> </div>
+                  <div class="d-flex  col-md-8 flex-column justify-content-center align-items-start col-9">
+                    <p class="mb-0 lead"> <b>Ariel's Undersea Adventure</b> </p><div class="blankline"></div>
+                  </div>
+                </div>
+                <div class="d-flex justify-content-end align-items-center">
+                   <h5 class="mb-0 mb_second">Overview &amp; Review</h5>
+                   <button class="btn" data-toggle="collapse" data-target="#target4" id="show_tripadvisor">tripadvisor.com</button>
+                </div>
+                <div class="collapse" id="target4">
+                  <div class="well">
+                      <iframe src="https://en.tripadvisor.com.hk/Attraction_Review-g29092-d8563332-Reviews-The_Little_Mermaid_Ariel_s_Undersea_Adventure-Anaheim_California.html#REVIEWS" width="100%" height="100%" frameborder="0" name="tripadvisor" scrolling="yes">   
+                      </iframe>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 p-5">
+            <div class="card">
+              <div class="card-body p-5">
+                <div class="row">
+                  <div class="col-md-4 col-3"> <img class="img-fluid d-block rounded-circle" src="https://dl.airtable.com/.attachmentThumbnails/c15b6448984561a4f102d02d8260720a/9a5040b7"> </div>
+                  <div class="d-flex  col-md-8 flex-column justify-content-center align-items-start col-9">
+                    <p class="mb-0 lead"> <b>Seven Dwarfs Mine Train</b> </p><div class="blankline"></div>
+                  </div>
+                </div>
+                <div class="d-flex justify-content-end align-items-center">
+                   <h5 class="mb-0 mb_second">Overview &amp; Review</h5>
+                   <button class="btn" data-toggle="collapse" data-target="#target5" id="show_tripadvisor">tripadvisor.com</button>
+                </div>
+                <div class="collapse" id="target5">
+                  <div class="well">
+                      <iframe src="https://www.tripadvisor.com/Attraction_Review-g34515-d8563138-Reviews-Seven_Dwarfs_Mine_Train-Orlando_Florida.html#REVIEWS" width="100%" height="100%" frameborder="0" name="tripadvisor" scrolling="yes">   
+                      </iframe>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 p-5">
+            <div class="card">
+              <div class="card-body p-5">
+                <div class="row">
+                  <div class="col-md-4 col-3"> <img class="img-fluid d-block rounded-circle" src="https://dl.airtable.com/.attachmentThumbnails/cd6a95b6d3c9e2b8b4dca68184eb406a/e1bf7cd8"> </div>
+                  <div class="d-flex  col-md-8 flex-column justify-content-center align-items-start col-9">
+                    <p class="mb-0 lead"> <b>Disneyland Hotel in California</b> </p><div class="blankline"></div>
+                  </div>
+                </div>
+                <div class="d-flex justify-content-end align-items-center">
+                   <h5 class="mb-0 mb_second">Overview &amp; Review</h5>
+                   <button class="btn" data-toggle="collapse" data-target="#target6" id="show_tripadvisor">tripadvisor.com</button>
+                </div>
+                <div class="collapse" id="target6">
+                  <div class="well">
+                      <iframe src="https://en.tripadvisor.com.hk/Hotel_Review-g29092-d78851-Reviews-Disneyland_Hotel-Anaheim_California.html?m=19905" width="100%" height="100%" frameborder="0" name="tripadvisor" scrolling="yes">   
+                      </iframe>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+  <!--Travel Guides End-->
+
+  <!--Blank before backgroud-image-->
+  <div class="banner" id="banner" data-interval="false" data-ride="carousel">
+    <div class="carousel-inner">
+      <div class="item active"></div>
+    </div>
+  </div>
+  <!--Blank before backgroud-image End-->
+  <!--Footer-->
+  <footer class="section section_footer">
+    <div class="container">
+      <div class="row d-flex justify-content-center">
+        <div class="col-sm-12 d-flex justify-content-center">
+          <h3 class="footer-brand">DisneyPrincessWorld</h3>
+        </div>
+        <div class="col-sm-12 d-flex justify-content-center">
+          <h5 class="footer-content"><div class="blankline"></div>
+              <a class= "footer_navlink" href="overview.html">Overview</a> <a class= "footer_navlink" href="movies.html">Movies</a> <a class= "footer_navlink footer_current" href="themepark.html">ThemePark</a> <a class= "footer_navlink" href="derivatives.html">Derivatives</a></h5>
+        </div>
+        <div class="col-md-12">
+          <hr>
+        </div>
+        <div class="col-sm-12 d-flex justify-content-center">
+          <div class="row">
+            <div class="row">
+              <div class="social_icons col-sm-12 text-right">
+                <a href="https://www.instagram.com/disney/?hl=en" target="_blank"><i class="fa fa-2x fa-fw fa-instagram pull-left text-inverse"></i></a>
+                <a href="https://twitter.com/Disney?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor" target="_blank"><i class="fa fa-2x fa-fw fa-twitter text-inverse"></i></a>
+                <a href="https://www.facebook.com/Disney/" target="_blank"><i class="fa fa-2x fa-facebook fa-fw pull-left text-inverse"></i></a>
+                <a href="https://www.pinterest.com/Disney/" target="_blank"><i class="fa fa-2x fa-fw hub pull-right text-inverse fa-pinterest"></i></a>
+                <div class="blanklinemd"></div>
+                <div class="blanklinemd"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <!--Footer End-->
+
+  <!--Map Script-->
+  <script src="https://unpkg.com/leaflet@1.5.1/dist/leaflet.js"></script>
+  <script>
+    var mapboxTiles = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      attribution: 'Map data &copy; <a href="https://openstreetmap.org">OpenStreetMap</a>',
+      maxZoom: 18,
+    });
+    var map = L.map('map').addLayer(mapboxTiles).setView([28.420958, -95.580962], 4);
+
+    var red = L.icon({
+    iconUrl: 'https://image.flaticon.com/icons/svg/1110/1110438.svg',
+    iconSize: [50, 50], 
+    popupAnchor: [0,-15]
+    });
+    var blue = L.icon({
+    iconUrl: 'https://image.flaticon.com/icons/svg/1217/1217659.svg',
+    iconSize: [60, 60], 
+    popupAnchor: [0,-15]
+    }); // color of the icon
+
+    var items1 = [];
+    var airtable_read_endpoint = "https://api.airtable.com/v0/appfU4wJMpJkHidFR/ThemeParks1?api_key=keywZFkvBIh6rNMwS";
+    var data1 = [];
+    $.getJSON(airtable_read_endpoint, function(result) {
+      $.each(result.records, function(key, value) {
+        items1 = {};
+        items1["name"] = value.fields.name;
+        items1["princess"] = value.fields.princess;
+        items1["picture"] = value.fields.pic;
+        items1["image_url"] = value.fields.img_url;
+        items1["latitud"] = value.fields.lat;
+        items1["longitud"] = value.fields.lng;
+        items1["area"] = value.fields.area;
+        items1["park"] = value.fields.park;
+        data1.push(items1);
+        console.log(items1);
+      }); // end .each
+    }); // end getJSON
+
+    function show_districts1() {
+      for (var i in data1) {
+        var latlng = L.latLng({
+          lat: data1[i].latitud,
+          lng: data1[i].longitud
+        });
+        L.marker(latlng , {icon: red}).bindPopup('<a href="' + data1[i].url + '" target="_blank">' + '<img src="' + data1[i].image_url + '" width = "80px"><br>' + data1[i].name + '</a>').addTo(map);
+      }
+    } // end show_districts1
+
+    var items2 = [];
+    var airtable_read_endpoint = "https://api.airtable.com/v0/appfU4wJMpJkHidFR/ThemeParks2?api_key=keywZFkvBIh6rNMwS";
+    var data2 = [];
+    $.getJSON(airtable_read_endpoint, function(result) {
+      $.each(result.records, function(key, value) {
+        items2 = {};
+        items2["name"] = value.fields.name;
+        items2["princess"] = value.fields.princess;
+        items2["picture"] = value.fields.pic;
+        items2["image_url"] = value.fields.img_url;
+        items2["latitud"] = value.fields.lat;
+        items2["longitud"] = value.fields.lng;
+        items2["area"] = value.fields.area;
+        items2["park"] = value.fields.park;
+        data2.push(items2);
+        console.log(items2);
+      }); // end .each
+    }); // end getJSON
+
+    function show_districts2() {
+      for (var i in data2) {
+        var latlng = L.latLng({
+          lat: data2[i].latitud,
+          lng: data2[i].longitud
+        });
+        L.marker(latlng , {icon: blue}).bindPopup('<a href="' + data2[i].url + '" target="_blank">' + '<img src="' + data2[i].image_url + '" width = "80px"><br>' + data2[i].name + '</a>').addTo(map);
+      }
+    } // end show_districts1
+
+
+
+
+
+  </script> 
+
+  <script src="script.js"></script>
+  </body>
+</html>
