@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html>
+    
+    <head>
+        <meta charset="utf-8">
+        <meta name="format-detection" content="telephone=no">
+        <meta name="msapplication-tap-highlight" content="no">
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+        <meta http-equiv="Content-Security-Policy" content="default-src * 'unsafe-inline'; style-src 'self' 'unsafe-inline'; media-src *">
+        <title>Disney princess album app</title>
+        <link rel="stylesheet" type="text/css" href="css/index.css">
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <link href="css/font-lato.css" rel="stylesheet" type="text/css">
+        <link href="css/pingendo.css" rel="stylesheet" type="text/css">
+        <link href="css/font-awesome.min.css" rel="stylesheet" type="text/css">
+        <link href="css/style.css" rel="stylesheet">
+        
+        <script type="text/javascript" src="js/jquery.min.js"></script>
+        <script type="text/javascript" src="js/bootstrap.min.js"></script>
+        
+        <script>
+            function modal_handle(name, chinesename, status, species, animation, image) {
+                         $("h3.modal-title").html(`${name}`);
+                         $(".modal-body").html(`<img height="auto" width="100%" src="${image}" class="img-responsive">
+                            <p>Chinese name: ${chinesename}</p><p>Princess status: ${status}</p>
+                            <p>Species: ${species}</p><p>First appearance in Disney: ${animation}</p>`);
+                         $('#popup-photo').modal('show');
+             } // end modal_handle function
+ 
+             function topFunction() {
+                 $('html, body').animate({scrollTop : 0},800);
+                 return false;
+             } // end topFunction
+ 
+     </script>
+    </head>
+    
+    <body>
+        <div id="top"></div>
+        <header>
+            <div class="navbar navbar-default navbar-fixed-top">
+                <div class="container">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-ex-collapse">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <a class="navbar-brand" href="#">Disney Princess<br></a>
+                    </div>
+                    <div class="collapse navbar-collapse" id="navbar-ex-collapse">
+                        <ul class="nav navbar-nav navbar-right">
+                            <li class="active">
+                                <a href="#top" id="navtext_active">Home</a>
+                            </li>
+                            <li>
+                                <a href="#album" id="navtext">Album</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <div class="cover">
+            <div class="cover-image" style="background-image : url('img/bg01.jpg'); margin-top:50px"></div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12 text-center">
+                        <h1 class="heading">Disney Princess</h1>
+                        <p class="headingtext">Snow White, Cinderella, Aurora, Ariel, Belle, Jasmine, Pocahontas, Mulan, Tiana, Rapunzel, Merida, Moana ...</p>
+                        <!--<br><br>
+                        <a href="#album" class="btn btn-lg btn-default">Details</a>-->
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="album">
+            <div class="container" id="album_items">
+            </div> <!-- end container -->
+        </div>
+        <div class="modal fade" id="popup-photo">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                        <h3 class="modal-title"></h3>
+                    </div>
+                    <div class="modal-body">
+                    </div>
+                    <div class="modal-footer">
+                        <p></p>
+                        <a class="btn btn-default" data-dismiss="modal">Close</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+        
+        <button onclick="topFunction()" id="myBtn" title="Go to top">^</button>
+        <footer id="footer" class="section section-primary">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4 col-sm-6 col-xs-8">
+                        <h5 class="footertext">More about princesses? Click  <a href="https://tessalyr.github.io/comm5961/final_project/entry.html">
+                            <i style="color:rgb(255, 189, 201)" class="fa fa-sm fa-fw fa-external-link text-inverse"></i></a></h5>
+                    </div>
+                    <div class="socialmedia col-md-8 col-sm-6 col-xs-4 text-right">
+                            <a href="https://www.instagram.com/disney/?hl=en"><i class="fa fa-fw fa-instagram fa-lg text-inverse"></i></a>
+                            <a href="https://www.facebook.com/Disney/"><i class="fa fa-fw fa-lg fa-twitter text-inverse"></i></a>
+                            <a href="https://twitter.com/Disney?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor"><i class="fa fa-facebook fa-fw fa-lg text-inverse"></i></a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+        <script>
+            $(document).ready(function(){
+                var counter = 1;
+                var at_getapi = "https://api.airtable.com/v0/appfU4wJMpJkHidFR/Home?api_key=keywZFkvBIh6rNMwS";
+                $.getJSON(at_getapi, function(result) {
+                    $.each(result.records, function(key,value) {
+                            var name = value.fields.name;
+                            var chinesename = value.fields.chinesename;
+                            var status = value.fields.status;
+                            var species = value.fields.species;
+                            var animation = value.fields.animation;
+                            var image = value.fields.img_url;
+                            if (counter == 1) {$("#album_items").append(`<div class="row">`)};
+                            $("#album_items").append(`<div class="col-md-4">
+                                <div class="thumbnail">
+                                    <img height="auto" width="100%" src="${image}" class="img-responsive" style="height:220px;">
+                                    <div class="caption">
+                                        <h3>${name}</h3>
+                                        <button class="btn btn-md btn-primary" onclick="modal_handle('${name}','${chinesename}',
+                                            '${status}','${species}','${animation}','${image}')" data-toggle="modal"
+                                            data-id="107" data-body="testing...">View</button>
+                                    </div>
+                                </div>
+                            </div>`);
+                            counter = counter +1; // counter++;
+                            if (counter == 4) {
+                                $("#album_items").append(`<div class="/row">`);
+                                counter = 1;
+                            };
+                    }); // end each
+                }); // end getJSON
+    
+                var mybutton = document.getElementById("myBtn");
+                // When the user scrolls down 20px from the top of the document, show the button
+                window.onscroll = function() {scrollFunction()};
+    
+                function scrollFunction() {
+                if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                    mybutton.style.display = "block";
+                } else {
+                    mybutton.style.display = "none";
+                }
+                }
+                // When the user clicks on the button, scroll to the top of the document
+            }); // end document ready
+        </script>
+        <script type="text/javascript" src="cordova.js"></script>
+        <script type="text/javascript" src="js/index.js"></script>
+        <script id="rendered-js">
+            // jQuery Smooth Scroll
+            // https://www.w3schools.com/jquery/tryit.asp?filename=tryjquery_eff_animate_smoothscroll
+            $("a").on('click', function(event) {
+
+            // Make sure this.hash has a value before overriding default behavior
+            if (this.hash !== "") {
+            // Prevent default anchor click behavior
+            event.preventDefault();
+
+            // Store hash
+            var hash = this.hash;
+
+            // Using jQuery's animate() method to add smooth page scroll
+            // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+            $('html, body').animate({
+                scrollTop: $(hash).offset().top
+            }, 800, function(){
+
+                // Add hash (#) to URL when done scrolling (default click behavior)
+                window.location.hash = hash;
+            }); // end animate
+            } // End if this.hash
+            }); // end onclick
+
+            $("a").on('click touchend', function(event) {
+
+            // Make sure this.hash has a value before overriding default behavior
+            if (this.hash !== "") {
+            // Prevent default anchor click behavior
+            event.preventDefault();
+
+            // Store hash
+            var hash = this.hash;
+
+            // Using jQuery's animate() method to add smooth page scroll
+            // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+            $('html, body').animate({
+                scrollTop: $(hash).offset().top
+            }, 800, function(){
+
+                // Add hash (#) to URL when done scrolling (default click behavior)
+                window.location.hash = hash;
+            }); // end animate
+            } // End if this.hash
+            }); // end onclick
+        </script>
+    </body>
+
+</html>
