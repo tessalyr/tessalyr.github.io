@@ -22,10 +22,10 @@
   filter: invert(33%) sepia(72%) saturate(10%) hue-rotate(314deg) brightness(100%) contrast(88%);
 }
 .enterTitle {
-  font-family: 'WaltographRegular';
+  font-family: 'Marcellus SC';
   color: #666; text-shadow: -0.1em 0.1em 0.1em rgba(172, 72, 72, 0.4);
-  font-size: 6vw;
-  letter-spacing: 0.05em;
+  font-size: 5.5vw;
+  letter-spacing: 0.03em;
 }
 .enterSubTitle {
   font-family: 'Marcellus SC';
@@ -56,10 +56,9 @@
 }
 .nav-item {margin-left: 0.3em;}
 .navbar-brand{
-  font-family: 'WaltographRegular';
+  font-family: 'Cinzel';
   font-size: x-large;
   padding-top: 0.7em;
-  letter-spacing: 0.03em;
 }
 .nav-link {font-size: 1.1em;} 
 .navbar-toggler{
@@ -150,7 +149,7 @@
 
 /* footer */
 .footer-brand{
-  font-family: 'WaltographRegular';
+  font-family: 'Cinzel';
   color:rgba(87, 100, 105, 0.8);
   margin:3em 0 0.2em 0;
   letter-spacing: 0.03em;
