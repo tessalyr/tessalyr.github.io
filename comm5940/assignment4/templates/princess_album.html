@@ -1,0 +1,34 @@
+{% extends "base.html" %}
+{% block content %}
+
+
+   <div class="container">
+      <h6 class="lead text-muted">{{album_user.name}}'s Website</h6>
+      <h2 style="color:#55595c; font-weight:bold;">Disney Princess World</h2>
+      <hr>
+   </div>
+
+  <div class="album">
+    <div class="container">
+
+       {% for item in dataset %}
+        {% if loop.index == 1 %}{% set counter = ( counter | default(1) ) %}{% endif %}
+        {% if counter == 1 %}<div class="row">{% endif %}
+        <div class="col-md-4">
+          <div class="card mb-4 shadow-sm">
+            <title>Placeholder</title><img height="225" width="auto" src="{{ item['img_url'] }}"/>
+            <div class="card-body">
+              <p class="card-text">Princess: {{ item['name'] }}<br>Chinese Name: {{ item['chinesename'] }}<br>Princess Status: {{ item['status'] }}<br>Species: {{ item['species'] }}<br>Animation: {{ item['animation'] }}</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <small class="text-muted">No. {{ loop.index }}</small>
+              </div>
+            </div>
+          </div>
+        </div> 
+       {% if counter == 3 %}</div><!--end row-->{%  set counter = ( counter | default(1) ) %}{% else %}{% set counter = ( counter | default(0) ) + 1 %}{% endif %}
+      {% endfor %} 
+      </div>
+    </div>
+
+
+{% endblock %}
